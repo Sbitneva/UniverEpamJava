@@ -8,14 +8,12 @@ import java.util.List;
 import task2.interfaces.*;
 import task2.utils.PrintVehicles;
 
-
 /**
  * 4. добавить к данной иерархии машину-амфибию, и БетМобиль, создать 3 масива сгупированых
  * по Интерфейсам Flyable, MoveAble, SwimAble
  *
  *@author Sbitneva Maria
  */
-
 public class Task2_4 {
 
     private CVehicle vehicles[];
@@ -25,15 +23,17 @@ public class Task2_4 {
 
     Task2_4(CVehicle vehicles[]){
         this.vehicles = vehicles;
+
         selectFlyable();
         selectMovable();
         selectSwimable();
+
         PrintVehicles.print(getMovable(), "Movable Vehicles: ");
         PrintVehicles.print(getSwimable(), "Swimable Vehicles: ");
         PrintVehicles.print(getFlyable(), "Flyable Vehicles");
     }
 
-    public void selectFlyable(){
+    private void selectFlyable(){
         List<CVehicle> fly = new ArrayList<>();
 
         for(int i = 0; i < vehicles.length; i++){
@@ -45,7 +45,7 @@ public class Task2_4 {
         fly.toArray(this.flyable);
     }
 
-    public void selectMovable(){
+    private void selectMovable(){
         List<CVehicle> move = new LinkedList<>();
         for(int i = 0; i < vehicles.length; i++){
             if (vehicles[i] instanceof MoveAble){

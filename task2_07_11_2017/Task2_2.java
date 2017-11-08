@@ -2,11 +2,9 @@ package task2;
 
 import task2.vehicles.CPlane;
 import task2.vehicles.CVehicle;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
+
 
 /**
  * 2. найти из механизмов Plane c с высотой полета выше 5000 с годом выпуска после 2000

@@ -3,14 +3,12 @@ package task2;
 import task2.vehicles.CVehicle;
 
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 1. механизмы с наименьшей ценой с наибольшей скоростью и не старше 5 лет
  *
  * @author Sbitneva Maria
  */
-
 public class Task2_1 {
     private CVehicle vehicles[];
 
@@ -63,7 +61,6 @@ public class Task2_1 {
                 vehicle = vehicles[i];
             }
         }
-
         return vehicle;
     }
 

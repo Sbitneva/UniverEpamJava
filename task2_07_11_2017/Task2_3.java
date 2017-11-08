@@ -11,9 +11,9 @@ import java.util.List;
  *
  * @author Sbitneva Maria
  */
-
 public class Task2_3 {
     private CVehicle vehicles[];
+
     Task2_3(CVehicle vehicles[]){
         this.vehicles = vehicles;
         List<CVehicle> notPlanes = selectSpeedInRangeNotPlane();
