@@ -4,7 +4,7 @@ import java.util.Collections;
 /**
  * 1. Упорядочить одномерный масиве вначале отрицательные по возрастанию
  *
- *
+ * @author Sbitneva Maria
  */
 
 public class Task1_1 {

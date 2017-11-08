@@ -1,4 +1,5 @@
 package utils;
+
 public class PrintData {
     /**
      * Prints matrix by rows
