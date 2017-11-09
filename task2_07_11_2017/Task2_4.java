@@ -47,6 +47,7 @@ public class Task2_4 {
 
     private void selectMovable(){
         List<CVehicle> move = new LinkedList<>();
+
         for(int i = 0; i < vehicles.length; i++){
             if (vehicles[i] instanceof MoveAble){
                 move.add(vehicles[i]);
@@ -58,6 +59,7 @@ public class Task2_4 {
 
     private void selectSwimable(){
         List<CVehicle> swim = new LinkedList<>();
+
         for(int i = 0; i < vehicles.length; i++){
             if (vehicles[i] instanceof SwimAble){
                 swim.add(vehicles[i]);

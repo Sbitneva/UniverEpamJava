@@ -21,7 +21,7 @@ public class Task2_3 {
         System.out.println("\nVehicles with speed in [200..500] range which are not planes\n");
 
         for(CVehicle vehicle:notPlanes){
-            System.out.println(vehicle.getClass().getSimpleName() + "with speed " + vehicle.getSpeed());
+            System.out.println(vehicle.getClass().getSimpleName() + " with speed " + vehicle.getSpeed());
         }
     }
 
@@ -35,7 +35,7 @@ public class Task2_3 {
 
         int max = 0;
         for (int i = 0; i < vehicles.length; i++){
-            if((vehicles[i] instanceof CPlane) && (vehicles[i].getSpeed() >= 200) && (vehicles[i].getSpeed() <= 500)){
+            if(!(vehicles[i] instanceof CPlane) && (vehicles[i].getSpeed() >= 200) && (vehicles[i].getSpeed() <= 500)){
                res.add(vehicles[i]);
             }
         }

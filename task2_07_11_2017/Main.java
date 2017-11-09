@@ -2,9 +2,11 @@ package task2;
 
 import task2.factories.VehiclesFactory;
 import task2.factories.StandardVehicleFactory;
+import task2.utils.Menu;
 import task2.vehicles.CVehicle;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Создать абстрактный класс CVerhicle. На его основе реализовать классы CPlane,
@@ -27,7 +29,6 @@ import java.util.Random;
  */
 public class Main {
 
-
     public static void main(String...args){
         final int vehicleAmount = 100;
         CVehicle standardVehicles[] = new CVehicle[vehicleAmount];
@@ -39,9 +40,33 @@ public class Main {
             vehicles[i] = VehiclesFactory.create(r.nextInt(5));
         }
 
-        new Task2_1(standardVehicles);
-        new Task2_2(standardVehicles);
-        new Task2_3(standardVehicles);
-        new Task2_4(vehicles);
+        Scanner in = new Scanner(System.in);
+
+        int result = 0;
+
+        while (true) {
+            Menu.showMenu();
+
+            result = in.nextInt();
+
+            switch (result) {
+                case 1:
+                    new Task2_1(standardVehicles);
+                    break;
+                case 2:
+                    new Task2_2(standardVehicles);
+                    break;
+                case 3:
+                    new Task2_3(standardVehicles);
+                    break;
+                case 4:
+                    new Task2_4(vehicles);
+                    break;
+                case 5:
+                    return;
+                default:
+                    System.out.println("Введите цифру от 1 до 5");
+            }
+        }
     }
 }
