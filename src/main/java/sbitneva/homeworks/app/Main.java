@@ -5,6 +5,7 @@ import task2.factories.StandardVehicleFactory;
 import task2.utils.Menu;
 import task2.vehicles.CVehicle;
 
+
 import java.util.Random;
 import java.util.Scanner;
 

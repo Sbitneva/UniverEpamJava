@@ -21,7 +21,7 @@ public class Task2_4 {
     private CVehicle flyable[];
     private CVehicle swimable[];
 
-    Task2_4(CVehicle vehicles[]){
+    public Task2_4(CVehicle vehicles[]){
         this.vehicles = vehicles;
 
         selectFlyable();
