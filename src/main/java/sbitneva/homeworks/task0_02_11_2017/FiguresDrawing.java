@@ -1,4 +1,4 @@
-package task0;
+package task0_02_11_2017;
 /**
  * Домашнее задание 1
  *

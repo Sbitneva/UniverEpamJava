@@ -1,12 +1,12 @@
-package task2;
+package task2_07_11_2017;
 
-import task2.vehicles.CVehicle;
+import task2_07_11_2017.vehicles.CVehicle;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import task2.interfaces.*;
-import task2.utils.PrintVehicles;
+import task2_07_11_2017.interfaces.*;
+import task2_07_11_2017.utils.PrintVehicles;
 
 /**
  * 4. добавить к данной иерархии машину-амфибию, и БетМобиль, создать 3 масива сгупированых

@@ -1,6 +1,6 @@
-package task2.factories;
+package task2_07_11_2017.factories;
 
-import task2.vehicles.CAmphibianCar;
+import task2_07_11_2017.vehicles.CAmphibianCar;
 
 import java.util.Random;
 

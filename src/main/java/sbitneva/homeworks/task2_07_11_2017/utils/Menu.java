@@ -1,4 +1,4 @@
-package task2.utils;
+package task2_07_11_2017.utils;
 
 public class Menu {
     private static final String menu = "\n\nВыберите действие по порядковому номеру и нажмите Enter1:\n" +

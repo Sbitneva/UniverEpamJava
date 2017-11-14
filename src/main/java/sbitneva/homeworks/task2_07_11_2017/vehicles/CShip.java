@@ -1,6 +1,6 @@
-package task2.vehicles;
+package task2_07_11_2017.vehicles;
 
-import task2.interfaces.SwimAble;
+import task2_07_11_2017.interfaces.SwimAble;
 
 public class CShip extends CVehicle implements SwimAble {
     private String portName = "Unnamed Port";

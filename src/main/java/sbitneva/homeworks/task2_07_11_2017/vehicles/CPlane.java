@@ -1,6 +1,6 @@
-package task2.vehicles;
+package task2_07_11_2017.vehicles;
 
-import task2.interfaces.FlyAble;
+import task2_07_11_2017.interfaces.FlyAble;
 
 public class CPlane extends CVehicle implements FlyAble {
     private int passengersAmount = 0;

@@ -1,6 +1,6 @@
-package task2.vehicles;
+package task2_07_11_2017.vehicles;
 
-import task2.interfaces.MoveAble;
+import task2_07_11_2017.interfaces.MoveAble;
 
 public class CCar extends CVehicle implements MoveAble {
     private int passengersAmount = 0;

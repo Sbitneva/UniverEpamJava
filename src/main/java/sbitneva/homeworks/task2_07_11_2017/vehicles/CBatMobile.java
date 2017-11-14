@@ -1,8 +1,8 @@
-package task2.vehicles;
+package task2_07_11_2017.vehicles;
 
-import task2.interfaces.FlyAble;
-import task2.interfaces.MoveAble;
-import task2.interfaces.SwimAble;
+import task2_07_11_2017.interfaces.FlyAble;
+import task2_07_11_2017.interfaces.MoveAble;
+import task2_07_11_2017.interfaces.SwimAble;
 
 public class CBatMobile extends CVehicle implements SwimAble, MoveAble, FlyAble {
 

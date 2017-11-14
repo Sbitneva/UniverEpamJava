@@ -1,9 +1,10 @@
-package task2;
+package app;
 
-import task2.factories.VehiclesFactory;
-import task2.factories.StandardVehicleFactory;
-import task2.utils.Menu;
-import task2.vehicles.CVehicle;
+import task2_07_11_2017.factories.VehiclesFactory;
+import task2_07_11_2017.factories.StandardVehicleFactory;
+import task2_07_11_2017.utils.Menu;
+import task2_07_11_2017.vehicles.CVehicle;
+import task2_07_11_2017.*;
 
 
 import java.util.Random;

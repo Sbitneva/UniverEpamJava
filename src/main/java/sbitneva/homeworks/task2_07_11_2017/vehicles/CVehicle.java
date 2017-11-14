@@ -1,4 +1,4 @@
-package task2.vehicles;
+package task2_07_11_2017.vehicles;
 
 public class CVehicle {
     private Integer price = 0;

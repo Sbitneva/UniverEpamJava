@@ -1,7 +1,7 @@
-package task2;
+package task2_07_11_2017;
 
-import task2.vehicles.CPlane;
-import task2.vehicles.CVehicle;
+import task2_07_11_2017.vehicles.CPlane;
+import task2_07_11_2017.vehicles.CVehicle;
 
 import java.util.LinkedList;
 import java.util.List;
