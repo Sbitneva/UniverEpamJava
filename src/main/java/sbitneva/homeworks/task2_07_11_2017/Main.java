@@ -1,4 +1,4 @@
-package app;
+package task2_07_11_2017;
 
 import task2_07_11_2017.factories.VehiclesFactory;
 import task2_07_11_2017.factories.StandardVehicleFactory;

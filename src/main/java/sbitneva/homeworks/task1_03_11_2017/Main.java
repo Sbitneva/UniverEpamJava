@@ -1,7 +1,7 @@
 package task1_03_11_2017;
 
 import java.util.Arrays;
-import utils.*;
+import task1_03_11_2017.utils.*;
 
 /**
  * Домашнее задание 2
