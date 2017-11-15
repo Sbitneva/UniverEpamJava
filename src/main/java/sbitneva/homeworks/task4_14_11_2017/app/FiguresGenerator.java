@@ -42,14 +42,18 @@ public class FiguresGenerator {
     public FiguresGenerator(){
        Random r = new Random();
        this.size = r.nextInt(1000);
-       figures = new Figure[size];
+       this.figures = new Figure[size];
 
        for(int i = 0; i < size; i++){
-           figures[i] = RandomFigureFactory.create();
+           this.figures[i] = RandomFigureFactory.create();
        }
 
        this.uncoloredFigures = getUncoloredFigures();
        this.coloredFigures = getColoredFigures();
+    }
+
+    public Figure[] getFigures() {
+        return figures;
     }
 
     public Figure[] getColoredFigures(){
@@ -149,11 +153,11 @@ public class FiguresGenerator {
     }
 
     public ColorTriangle[] getColoredTriangles() {
-        if(triangles == null){
+        if(coloredTriangles == null){
             List<ColorTriangle> triList = new LinkedList<>();
-            for(int i = 0; i < uncoloredFigures.length; i++){
-                if(uncoloredFigures[i] instanceof ColorTriangle){
-                    triList.add((ColorTriangle)uncoloredFigures[i]);
+            for(int i = 0; i < coloredFigures.length; i++){
+                if(coloredFigures[i] instanceof ColorTriangle){
+                    triList.add((ColorTriangle)coloredFigures[i]);
                 }
             }
             this.coloredTriangles = triList.toArray(new ColorTriangle[triList.size()]);
@@ -165,9 +169,9 @@ public class FiguresGenerator {
         if(this.polygons == null){
             List<Polygon> polygonsList = new LinkedList<>();
 
-            for(int i = 0; i < this.coloredFigures.length; i++){
-                if(this.coloredFigures[i] instanceof Polygon){
-                    polygonsList.add((Polygon) this.coloredFigures[i]);
+            for(int i = 0; i < this.uncoloredFigures.length; i++){
+                if(this.uncoloredFigures[i] instanceof Polygon){
+                    polygonsList.add((Polygon) this.uncoloredFigures[i]);
                 }
             }
             this.polygons = polygonsList.toArray(new Polygon[polygonsList.size()]);
