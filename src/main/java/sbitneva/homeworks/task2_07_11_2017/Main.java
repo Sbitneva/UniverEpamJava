@@ -29,7 +29,7 @@ import java.util.Scanner;
  * @author Sbitneva Maria
  *
  */
-public class Main {
+class Main {
 
     public static void main(String...args){
         final int vehicleAmount = 100;

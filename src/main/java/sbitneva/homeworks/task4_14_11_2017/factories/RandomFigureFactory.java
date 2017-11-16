@@ -7,7 +7,7 @@ import java.util.Random;
 public class RandomFigureFactory {
     public static Figure create(){
         Random r = new Random();
-        switch (r.nextInt(7)){
+        switch (r.nextInt(8)){
             case 0:
                 return PointFactory.create();
             case 1:
