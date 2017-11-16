@@ -4,7 +4,7 @@ import task4_14_11_2017.figures.Figure;
 
 import java.util.Random;
 
-public class RandomFigureFactory {
+public class RandomFigureFactory extends AbstractConcreteFactory {
     public static Figure create(){
         Random r = new Random();
         switch (r.nextInt(8)){

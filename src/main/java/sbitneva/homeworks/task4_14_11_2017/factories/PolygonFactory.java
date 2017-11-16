@@ -5,7 +5,7 @@ import task4_14_11_2017.figures.Polygon;
 
 import java.util.Random;
 
-public class PolygonFactory {
+public class PolygonFactory extends AbstractConcreteFactory {
     public static Polygon create(){
         Random r = new Random();
         int n = r.nextInt(100);

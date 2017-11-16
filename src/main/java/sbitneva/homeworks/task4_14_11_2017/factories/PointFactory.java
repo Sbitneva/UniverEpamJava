@@ -4,7 +4,7 @@ import task4_14_11_2017.figures.Point;
 
 import java.util.Random;
 
-public class PointFactory {
+public class PointFactory extends AbstractConcreteFactory{
 
     public static Point create(){
         Random r = new Random();

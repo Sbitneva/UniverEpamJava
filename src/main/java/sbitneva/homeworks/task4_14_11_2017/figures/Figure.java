@@ -2,7 +2,7 @@ package task4_14_11_2017.figures;
 
 public class Figure {
     static public int id;
-    Figure(){
+    public Figure(){
         this.id++;
     }
 
