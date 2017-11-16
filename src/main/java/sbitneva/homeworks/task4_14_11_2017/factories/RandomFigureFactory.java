@@ -22,10 +22,8 @@ public class RandomFigureFactory {
                 return ColorTriangleFactory.create();
             case 6:
                 return PolygonFactory.create();
-            case 7:
-                return ColorPolygonFactory.create();
             default:
-                return null;
+                return ColorPolygonFactory.create();
         }
     }
 }
