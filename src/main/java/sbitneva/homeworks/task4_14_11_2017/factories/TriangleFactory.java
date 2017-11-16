@@ -11,6 +11,11 @@ public class TriangleFactory {
         apexB = PointFactory.create();
         apexC = PointFactory.create();
 
-        return new Triangle(apexA, apexB, apexC);
+        Triangle triangle = new Triangle(apexA, apexB, apexC);
+        while(!triangle.isValid()){
+            triangle.setApexA(PointFactory.create());
+        }
+
+        return triangle;
     }
 }

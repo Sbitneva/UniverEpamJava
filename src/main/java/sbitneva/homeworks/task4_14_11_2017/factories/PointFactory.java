@@ -8,6 +8,6 @@ public class PointFactory {
 
     public static Point create(){
         Random r = new Random();
-        return new Point(r.nextInt(), r.nextInt());
+        return new Point(r.nextInt(1000), r.nextInt(1000));
     }
 }
