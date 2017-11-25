@@ -4,7 +4,9 @@ coverage:
     project:
       default: false
       weather_client:
-        paths: "task5_16_11_2017/WeatherClient/"
+        paths: task5_16_11_2017/WeatherClient/
+      transport:
+        paths: task6_16_11_2017/Transport/
 
 comment:
   layout: "header, diff, sunburst"
