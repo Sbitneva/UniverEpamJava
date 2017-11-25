@@ -1,0 +1,19 @@
+---
+coverage:
+  range: 70...85
+  round: down
+  precision: 2
+  
+  status:
+    project:
+      default: off
+      WeatherClient:
+        flags: WeatherClient
+
+flags:
+  WeatherClient:
+    paths:
+      - task5_16_11_2017/WeatherClient/
+
+comment:
+  behavior: new
