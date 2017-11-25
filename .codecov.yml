@@ -1,0 +1,11 @@
+---
+coverage:
+  status:
+    project:
+      default: false
+      weather_client:
+        paths: "task5_16_11_2017/WeatherClient/"
+
+comment:
+  layout: "header, diff, sunburst"
+  require_changes: true
