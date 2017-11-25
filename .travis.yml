@@ -9,14 +9,14 @@ cache:
 jdk:
   - oraclejdk8
 env:
-  - SUB_PROJECT=WeatherClient;SUB_PROJECT_PATH=task5_16_11_2017/WeatherClient
+  - PROJECT_FLAG=weather_client PROJECT_PATH=task5_16_11_2017/WeatherClient
 
 install: true
 script:
-  - cd $SUB_PROJECT_PATH && mvn clean install
+  - cd $PROJECT_PATH && mvn clean install
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -C -F $SUB_PROJECT
+  - bash <(curl -s https://codecov.io/bash) -cF $PROJECT_FLAG
 
 branches:
   only:
