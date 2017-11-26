@@ -1,0 +1,10 @@
+---
+coverage:
+  status:
+    project:
+      default: false
+      WeatherClient:
+        paths: task5_16_11_2017/WeatherClient/
+      Transport:
+        paths: task6_16_11_2017/Transport/
+comment: false

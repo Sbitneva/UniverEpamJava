@@ -9,7 +9,8 @@ cache:
 jdk:
   - oraclejdk8
 env:
-  - PROJECT_FLAG=weather_client PROJECT_PATH=task5_16_11_2017/WeatherClient
+  - PROJECT_FLAG=WeatherClient PROJECT_PATH=task5_16_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=Transport PROJECT_PATH=task6_16_11_2017/$PROJECT_FLAG
 
 install: true
 script:
