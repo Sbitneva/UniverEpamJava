@@ -1,3 +1,5 @@
+[![Travis CI Build Status](https://img.shields.io/travis/Sbitneva/UniverEpamJava/master.svg?style=for-the-badge)](https://travis-ci.org/Sbitneva/UniverEpamJava) [![Codecov.io Coverage Status](https://img.shields.io/codecov/c/github/Sbitneva/UniverEpamJava/master.svg?style=for-the-badge)](https://codecov.io/gh/Sbitneva/UniverEpamJava)
+
 # EPAM Java (2017 autumn-winter)
 
 ## Tasks
