@@ -1,5 +1,0 @@
-[alias]
-    l = log --all --decorate --oneline --graph
-    s = status
-    a = add
-    c = commit
