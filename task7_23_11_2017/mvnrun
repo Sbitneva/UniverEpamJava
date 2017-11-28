@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=homework7.app -DartifactId=RegularExpressionsForBook -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
