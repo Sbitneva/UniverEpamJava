@@ -1,7 +1,7 @@
-package homework5.app.utils;
+package utils;
 
-import homework5.app.entities.carriages.PassengerCoach;
-import homework5.app.entities.trains.PassengerTrain;
+import entities.carriages.PassengerCoach;
+import entities.trains.PassengerTrain;
 
 import java.util.ArrayList;
 

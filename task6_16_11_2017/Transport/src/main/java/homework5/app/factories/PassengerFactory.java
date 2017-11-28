@@ -1,6 +1,6 @@
-package homework5.app.factories;
+package factories;
 
-import homework5.app.entities.Passenger;
+import entities.Passenger;
 
 import java.util.ArrayList;
 import java.util.Random;

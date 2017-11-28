@@ -1,6 +1,6 @@
-package homework5.app.entities;
+package entities;
 
-import homework5.app.entities.trains.Train;
+import entities.trains.Train;
 
 import java.util.ArrayList;
 

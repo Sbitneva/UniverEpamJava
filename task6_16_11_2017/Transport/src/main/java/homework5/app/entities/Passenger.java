@@ -1,4 +1,4 @@
-package homework5.app.entities;
+package entities;
 
 public class Passenger {
 

@@ -1,6 +1,6 @@
-package homework5.app.factories;
+package factories;
 
-import homework5.app.entities.carriages.FreightCar;
+import entities.carriages.FreightCar;
 
 public class FreightCarFactory {
 

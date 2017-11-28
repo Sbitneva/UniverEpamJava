@@ -1,4 +1,4 @@
-package homework5.app.exceptions;
+package exceptions;
 
 public class OutOfPassengersTrainRangeException extends Exception {
     public OutOfPassengersTrainRangeException(String message) {

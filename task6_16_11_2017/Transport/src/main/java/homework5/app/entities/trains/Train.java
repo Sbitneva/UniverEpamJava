@@ -1,4 +1,4 @@
-package homework5.app.entities.trains;
+package entities.trains;
 
 public class Train {
     private static int id;

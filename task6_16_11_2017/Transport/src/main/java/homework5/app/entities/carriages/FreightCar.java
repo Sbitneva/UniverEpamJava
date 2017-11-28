@@ -1,6 +1,6 @@
-package homework5.app.entities.carriages;
+package entities.carriages;
 
-import homework5.app.entities.carriages.Carriage;
+import entities.carriages.Carriage;
 
 public class FreightCar extends Carriage {
 

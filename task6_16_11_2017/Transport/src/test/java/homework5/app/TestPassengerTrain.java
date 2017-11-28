@@ -1,11 +1,11 @@
-package homework5.app;
+package app;
 
-import homework5.app.entities.Passenger;
-import homework5.app.entities.carriages.PassengerCoach;
-import homework5.app.entities.trains.PassengerTrain;
-import homework5.app.exceptions.OutOfCarRangeException;
-import homework5.app.exceptions.OutOfPassengersTrainRangeException;
-import homework5.app.factories.*;
+import entities.Passenger;
+import entities.carriages.PassengerCoach;
+import entities.trains.PassengerTrain;
+import exceptions.OutOfCarRangeException;
+import exceptions.OutOfPassengersTrainRangeException;
+import factories.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 

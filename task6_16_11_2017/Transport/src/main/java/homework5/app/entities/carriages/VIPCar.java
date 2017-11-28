@@ -1,7 +1,7 @@
-package homework5.app.entities.carriages;
+package entities.carriages;
 
-import homework5.app.entities.Passenger;
-import homework5.app.exceptions.OutOfCarRangeException;
+import entities.Passenger;
+import exceptions.OutOfCarRangeException;
 
 import java.util.ArrayList;
 
