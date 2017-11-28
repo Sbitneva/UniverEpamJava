@@ -11,6 +11,6 @@
 | 4 | 2017.11.14 | Factory pattern, figures, unit tests |
 | 5 | 2017.11.16 | [**Observer pattern, weather client, REST requests**](task5_16_11_2017/WeatherClient) |
 | 6 | 2017.11.16 | [**Complex hierarchy, trains**](task6_16_11_2017/Transport) |
-| 7 | 2017.11.23 | Data structures, map, regexps, web parsing |
+| 7 | 2017.11.23 | Data structures, map, regexps, web parsing, entity mocking |
 | 8 | 2017.11.24 | Data structures, deque, calculator, PDA |
 
