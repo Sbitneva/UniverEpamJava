@@ -1,8 +1,8 @@
-package homework5.app.factories;
+package factories;
 
-import homework5.app.entities.carriages.FreightCar;
-import homework5.app.entities.trains.FreightTrain;
-import homework5.app.exceptions.OutOfFreightTrainCarsAmount;
+import entities.carriages.FreightCar;
+import entities.trains.FreightTrain;
+import exceptions.OutOfFreightTrainCarsAmount;
 
 import java.util.ArrayList;
 import java.util.Random;

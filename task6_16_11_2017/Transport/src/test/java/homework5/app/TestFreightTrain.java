@@ -1,10 +1,10 @@
-package homework5.app;
+package app;
 
-import homework5.app.entities.carriages.FreightCar;
-import homework5.app.entities.trains.FreightTrain;
-import homework5.app.exceptions.OutOfFreightTrainCarsAmount;
-import homework5.app.factories.FreightCarFactory;
-import homework5.app.factories.FreightTrainFactory;
+import entities.carriages.FreightCar;
+import entities.trains.FreightTrain;
+import exceptions.OutOfFreightTrainCarsAmount;
+import factories.FreightCarFactory;
+import factories.FreightTrainFactory;
 import org.junit.Test;
 
 import java.util.ArrayList;

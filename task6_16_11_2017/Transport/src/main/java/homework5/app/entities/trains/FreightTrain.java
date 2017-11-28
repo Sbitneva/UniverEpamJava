@@ -1,7 +1,7 @@
-package homework5.app.entities.trains;
+package entities.trains;
 
-import homework5.app.entities.carriages.FreightCar;
-import homework5.app.exceptions.OutOfFreightTrainCarsAmount;
+import entities.carriages.FreightCar;
+import exceptions.OutOfFreightTrainCarsAmount;
 
 import java.util.ArrayList;
 

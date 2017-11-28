@@ -1,13 +1,13 @@
-package homework5.app;
+package app;
 
-import homework5.app.entities.RailwayTransport;
-import homework5.app.entities.carriages.FirstClassSittingCar;
-import homework5.app.entities.trains.PassengerTrain;
-import homework5.app.entities.trains.Train;
-import homework5.app.exceptions.OutOfPassengersTrainRangeException;
-import homework5.app.factories.FirstClassSittingCarFactory;
-import homework5.app.factories.PassengerTrainFactory;
-import homework5.app.factories.RailwayTransportFactory;
+import entities.RailwayTransport;
+import entities.carriages.FirstClassSittingCar;
+import entities.trains.PassengerTrain;
+import entities.trains.Train;
+import exceptions.OutOfPassengersTrainRangeException;
+import factories.FirstClassSittingCarFactory;
+import factories.PassengerTrainFactory;
+import factories.RailwayTransportFactory;
 import org.junit.Test;
 
 import java.util.ArrayList;

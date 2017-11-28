@@ -1,7 +1,7 @@
-package homework5.app.entities.trains;
+package entities.trains;
 
-import homework5.app.entities.carriages.PassengerCoach;
-import homework5.app.exceptions.OutOfPassengersTrainRangeException;
+import entities.carriages.PassengerCoach;
+import exceptions.OutOfPassengersTrainRangeException;
 
 import java.util.ArrayList;
 import java.util.Comparator;

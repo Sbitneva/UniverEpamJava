@@ -1,11 +1,11 @@
-package homework5.app.app;
+package app;
 
-import homework5.app.entities.carriages.PassengerCoach;
-import homework5.app.entities.trains.PassengerTrain;
-import homework5.app.exceptions.OutOfPassengersTrainRangeException;
-import homework5.app.entities.*;
-import homework5.app.factories.RailwayTransportFactory;
-import homework5.app.utils.Utils;
+import entities.carriages.PassengerCoach;
+import entities.trains.PassengerTrain;
+import exceptions.OutOfPassengersTrainRangeException;
+import entities.*;
+import factories.RailwayTransportFactory;
+import utils.Utils;
 
 import java.util.ArrayList;
 

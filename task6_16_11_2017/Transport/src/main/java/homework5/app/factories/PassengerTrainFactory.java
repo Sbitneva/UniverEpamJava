@@ -1,9 +1,9 @@
-package homework5.app.factories;
+package factories;
 
-import homework5.app.entities.carriages.FirstClassSittingCar;
-import homework5.app.entities.carriages.PassengerCoach;
-import homework5.app.entities.trains.PassengerTrain;
-import homework5.app.exceptions.OutOfPassengersTrainRangeException;
+import entities.carriages.FirstClassSittingCar;
+import entities.carriages.PassengerCoach;
+import entities.trains.PassengerTrain;
+import exceptions.OutOfPassengersTrainRangeException;
 
 import java.util.ArrayList;
 import java.util.Random;

@@ -1,7 +1,7 @@
-package homework5.app;
-import homework5.app.entities.carriages.VIPCar;
-import homework5.app.exceptions.OutOfCarRangeException;
-import homework5.app.factories.PassengerFactory;
+package app;
+import entities.carriages.VIPCar;
+import exceptions.OutOfCarRangeException;
+import factories.PassengerFactory;
 import org.junit.Test;
 
 
@@ -24,5 +24,4 @@ public class TestVIPCar {
         }
         assertTrue(vipCar.getPassengerAmount() == vipCar.MAX_PASSENGER_AMOUNT);
     }
-
 }

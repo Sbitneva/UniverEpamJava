@@ -1,8 +1,8 @@
-package homework5.app.factories;
+package factories;
 
-import homework5.app.entities.Passenger;
-import homework5.app.entities.carriages.VIPCar;
-import homework5.app.exceptions.OutOfCarRangeException;
+import entities.Passenger;
+import entities.carriages.VIPCar;
+import exceptions.OutOfCarRangeException;
 
 import java.util.ArrayList;
 import java.util.Random;

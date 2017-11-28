@@ -1,8 +1,8 @@
-package homework5.app;
+package app;
 
-import homework5.app.entities.Passenger;
-import homework5.app.entities.carriages.*;
-import homework5.app.factories.*;
+import entities.Passenger;
+import entities.carriages.*;
+import factories.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
