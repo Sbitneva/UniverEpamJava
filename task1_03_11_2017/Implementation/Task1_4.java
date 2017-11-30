@@ -1,5 +1,4 @@
-package task1_03_11_2017;
-
+package hw1;
 import java.util.Arrays;
 import java.util.Comparator;
 
