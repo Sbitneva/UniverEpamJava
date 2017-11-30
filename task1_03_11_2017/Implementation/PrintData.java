@@ -1,4 +1,4 @@
-package task1_03_11_2017.utils;
+package hw1.utils;
 
 public class PrintData {
     /**
