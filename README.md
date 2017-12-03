@@ -11,8 +11,8 @@
 |  4 | 2017.11.14 | [**Factory pattern, figures, unit tests**](task4_14_11_2017/Figures) |
 |  5 | 2017.11.16 | [**Observer pattern, weather client, REST requests**](task5_16_11_2017/WeatherClient) |
 |  6 | 2017.11.16 | [**Complex hierarchy, trains**](task6_16_11_2017/Transport) |
-|  7 | 2017.11.23 | Data structures, map, regexps, web parsing, entity mocking |
-|  8 | 2017.11.23 | Regexps, text parsing |
-|  9 | 2017.11.24 | Data structures, deque, calculator, PDA |
-| 10 | 2017.11.28 | XML language, object &harr; XML transformation, football |
-| 11 | 2017.11.30 | Logging |
+|  7 | 2017.11.23 | Regular expressions, html parsing, web spider, map, mocking |
+|  8 | 2017.11.23 | Regular expressions, text parsing |
+|  9 | 2017.11.24 | Deque, calculator |
+| 10 | 2017.11.28 | XML language parsing, military aircrafts, Logging |
+| 11 | 2017.12.01 | Object serialization, figures |
