@@ -1,4 +1,4 @@
-package homework7.app.entities;
+package app.entities;
 
 public class Word{
     String word;

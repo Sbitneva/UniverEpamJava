@@ -1,7 +1,7 @@
-package homework7.app;
+package app;
 
-import homework7.app.entities.Text;
-import homework7.app.entities.Word;
+import app.entities.Text;
+import app.entities.Word;
 import org.junit.Test;
 
 import java.util.ArrayList;

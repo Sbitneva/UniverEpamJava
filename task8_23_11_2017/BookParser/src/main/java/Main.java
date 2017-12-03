@@ -1,5 +1,7 @@
-import homework7.app.entities.Text;
-import homework7.app.entities.Word;
+package app;
+
+import app.entities.Text;
+import app.entities.Word;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package homework7.app.entities;
+package app.entities;
 
 import java.util.*;
 import java.util.regex.Matcher;
