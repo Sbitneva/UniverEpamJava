@@ -2,6 +2,7 @@ import homework7.app.entities.Text;
 import homework7.app.entities.Word;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 
 /**
@@ -14,5 +15,8 @@ public class Main {
     public static void main(String...args){
         Text text = new Text("book.txt");
         ArrayList<Word> words = text.getSortedWords();
+        for(Word w:words){
+            System.out.println(w.toString());
+        }
     }
 }

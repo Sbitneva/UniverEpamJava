@@ -15,7 +15,8 @@ public class Text {
     public ArrayList<Word> getSortedWords(){
         HashSet<String> words = new HashSet<String>();
         ArrayList<String> arrayList = new ArrayList<String>();
-        Pattern pattern = Pattern.compile("(?<!\\S)[AaEeIiOoUuYyАаЕеЁёИиОоУуЫыЭэЮюЯя]\\p{Alpha}*(?!\\S)", Pattern.UNICODE_CHARACTER_CLASS);
+        Pattern pattern = Pattern.compile("(?<!\\S)[AaEeIiOoUuYyАаЕеЁёИиОоУуЫыЭэЮюЯя]\\p{Alpha}*(?!\\S)",
+                Pattern.UNICODE_CHARACTER_CLASS);
         Matcher matcher = pattern.matcher(this.bookText);
         while(matcher.find()){
             words.add(matcher.group());
@@ -27,7 +28,6 @@ public class Text {
 
         arrayList.sort(new Comparator<String>() {
             public int compare(String s, String t1) {
-                Pattern pattern = Pattern.compile("^[AaEeIiOoUuYyАаЕеЁёИиОоУуЫыЭэЮюЯя]+");
                 return (t1.replaceAll("^[AaEeIiOoUuYyАаЕеЁёИиОоУуЫыЭэЮюЯя]+", "")).
                         compareTo(s.replaceAll("^[AaEeIiOoUuYyАаЕеЁёИиОоУуЫыЭэЮюЯя]+", ""));
             }
