@@ -1,9 +1,9 @@
-package homework7.app;
+package app;
 
-import homework7.app.entities.StatisticsPage;
-import homework7.app.entities.URLPage;
-import homework7.app.entities.URLReader;
-import homework7.app.tasks.Task7_1;
+import app.entities.StatisticsPage;
+import app.entities.URLPage;
+import app.entities.URLReader;
+import app.tasks.Task;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -12,6 +12,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.net.URL;
+import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -21,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({URLReader.class, URLPage.class, URL.class, StatisticsPage.class, Task7_1.class})
+@PrepareForTest({URLReader.class, URLPage.class, URL.class, StatisticsPage.class, Task.class})
 public class TestUrlPage {
 
     public URL randUrl;
@@ -32,11 +33,9 @@ public class TestUrlPage {
     @Test
     public void testURLPage() throws Exception{
 
-        html = URLReader.readUrl(new URL("file:///home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/" +
-                "task7_23_11_2017/RegEx/src/test/java/homework7/app/text.html"));
+        html = URLReader.readUrl(new File("src/test/java/sbitneva/homeworks/app/text.html").toURI().toURL());
 
-        text =  URLReader.readUrl(new URL("file:///home/mariia/Documents/MavenProjects/UniverEpamJava/" +
-                "UniverEpamJava/task7_23_11_2017/RegEx/src/test/java/homework7/app/smallText"));
+        text =  URLReader.readUrl(new File("src/test/java/sbitneva/homeworks/app/smallText").toURI().toURL());
 
         randUrl = new URL("https://stackoverflow.com");
 

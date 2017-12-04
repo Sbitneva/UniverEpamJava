@@ -1,4 +1,4 @@
-package homework7.app.entities;
+package app.entities;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

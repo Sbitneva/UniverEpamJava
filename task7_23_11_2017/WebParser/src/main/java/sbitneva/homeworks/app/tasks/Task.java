@@ -1,12 +1,12 @@
-package homework7.app.tasks;
+package app.tasks;
 
-import homework7.app.entities.StatisticsPage;
-import homework7.app.entities.URLPage;
+import app.entities.StatisticsPage;
+import app.entities.URLPage;
 
 import java.net.URL;
 import java.util.*;
 
-public class Task7_1 {
+public class Task {
     URL url;
     URLPage page;
     URL urls[];
@@ -14,7 +14,7 @@ public class Task7_1 {
     ArrayList<StatisticsPage> statisticsPages;
 
 
-    public Task7_1(URL url){
+    public Task(URL url){
 
         this.url = url;
         this.page = new URLPage(this.url);

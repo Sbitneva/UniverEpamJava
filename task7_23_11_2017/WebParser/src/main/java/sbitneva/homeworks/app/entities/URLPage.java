@@ -1,4 +1,4 @@
-package homework7.app.entities;
+package app.entities;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
