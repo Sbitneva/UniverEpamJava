@@ -13,6 +13,6 @@
 |  6 | 2017.11.16 | [**Complex hierarchy, trains**](task6_16_11_2017/Transport) |
 |  7 | 2017.11.23 | Regular expressions, html parsing, web spider, map, mocking |
 |  8 | 2017.11.23 | Regular expressions, text parsing |
-|  9 | 2017.11.24 | Deque, calculator |
+|  9 | 2017.11.24 | [**Deque, calculator**](task9_24_11_2017/Calculator) |
 | 10 | 2017.11.28 | XML language parsing, military aircrafts, Logging |
 | 11 | 2017.12.01 | Object serialization, figures |
