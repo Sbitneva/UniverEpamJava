@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 
 public class TestParsers {
-    final String path = "xml/aircraft_set_new.xml";
+    final String path = "xml/aircraft_set.xml";
     DomXmlParser domXmlParser = null;
     SaxXmlParser saxXmlParser = null;
     StaxXmlParser staxXmlParser = null;

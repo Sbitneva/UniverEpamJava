@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
-<plane xsi:noNamespaceSchemaLocation="schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id>3</id>
-  <model>string</model>
-  <origin>string</origin>
-  <type>multirole combat</type>
-  <seats>2</seats>
-  <ammunition>3</ammunition>
-  <radar>true</radar>
-  <parameters>
-    <width>801715775</width>
-    <lenght>4191750641</lenght>
-    <height>848685537</height>
-  </parameters>
-  <price>3070085572</price>
+<plane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <id>3</id>
+    <model>string</model>
+    <origin>string</origin>
+    <type>multirole combat</type>
+    <seats>2</seats>
+    <ammunition>3</ammunition>
+    <radar>true</radar>
+    <parameters>
+        <width>801715775</width>
+        <lenght>4191750641</lenght>
+        <height>848685537</height>
+    </parameters>
+    <price>3070085572</price>
 </plane>

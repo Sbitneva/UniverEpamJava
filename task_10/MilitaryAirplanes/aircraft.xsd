@@ -1,11 +1,10 @@
-<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
-            xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="plane">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element type="xs:ID" name="id"/>
-                <xs:element type="xs:string" name="model"/>
-                <xs:element type="xs:string" name="origin"/>                
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:ID"/>
+                <xs:element name="model" type="xs:string"/>
+                <xs:element name="origin" type="xs:string"/>
                 <xs:element name="type">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -18,39 +17,38 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="seats">                	
-                	<xs:simpleType>
-                		<xs:restriction base="xs:string">
-                			<xs:pattern value="[1-2]"/>
-                		</xs:restriction>
+                <xs:element name="seats">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[1-2]"/>
+                        </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="ammunition" minOccurs="0">
-                	<xs:simpleType>
-                		<xs:restriction base="xs:string">
-                			<xs:pattern value="[1-9]|10"/>
-                		</xs:restriction>
+                <xs:element minOccurs="0" name="ammunition">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[1-9]|10"/>
+                        </xs:restriction>
                     </xs:simpleType>
-                </xs:element>	
-				<xs:element name="radar">
-					<xs:simpleType>
-						<xs:restriction base="xs:boolean">
-							<xs:pattern value="0|1"/>
-						</xs:restriction>
-					</xs:simpleType>                
+                </xs:element>
+                <xs:element name="radar">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:boolean">
+                            <xs:pattern value="0|1"/>
+                        </xs:restriction>
+                    </xs:simpleType>
                 </xs:element>
                 <xs:element name="parameters">
-                	<xs:complexType>
-                		<xs:sequence>
-                			<xs:element name="width" type="xs:positiveInteger"/>                				
-                			<xs:element name="lenght" type="xs:positiveInteger"/>                				
-                			<xs:element name="height" type="xs:positiveInteger"/>                				
-                		</xs:sequence>
-                	</xs:complexType>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="width" type="xs:positiveInteger"/>
+                            <xs:element name="lenght" type="xs:positiveInteger"/>
+                            <xs:element name="height" type="xs:positiveInteger"/>
+                        </xs:sequence>
+                    </xs:complexType>
                 </xs:element>
                 <xs:element name="price" type="xs:positiveInteger"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
-

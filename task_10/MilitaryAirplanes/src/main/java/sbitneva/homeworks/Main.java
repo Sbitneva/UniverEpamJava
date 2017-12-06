@@ -31,23 +31,23 @@ import java.util.Arrays;
  *    Корневой элемент назвать Plane.
  *
  */
-public class App 
+public class Main
 {
-    static Logger log = Logger.getLogger(App.class.getName());
+    static Logger log = Logger.getLogger(Main.class.getName());
     public static void main(String[] args)
     {
         BasicConfigurator.configure();
 
         DomXmlParser domXmlParser = new DomXmlParser();
-        ArrayList<AircraftWithAmmunition> aircraftsFromDom = domXmlParser.read("xml/aircraft_set_new.xml");
+        ArrayList<AircraftWithAmmunition> aircraftsFromDom = domXmlParser.read("xml/aircraft_set.xml");
         log.debug("Aircraft objects are extracted from DOM parser:" + Arrays.deepToString(aircraftsFromDom.toArray()));
 
         SaxXmlParser saxXmlParser = new SaxXmlParser();
-        ArrayList<AircraftWithAmmunition> aircraftsFromSax = saxXmlParser.getObjects("xml/aircraft_set_new.xml");
+        ArrayList<AircraftWithAmmunition> aircraftsFromSax = saxXmlParser.getObjects("xml/aircraft_set.xml");
         log.debug("Aircraft objects are extracted from SAX parser:" + Arrays.deepToString(aircraftsFromSax.toArray()));
 
         StaxXmlParser staxXmlParser = new StaxXmlParser();
-        ArrayList<AircraftWithAmmunition> aircraftsFromStax = staxXmlParser.getAircrafts("xml/aircraft_set_new.xml");
+        ArrayList<AircraftWithAmmunition> aircraftsFromStax = staxXmlParser.getAircrafts("xml/aircraft_set.xml");
         log.debug("Aircraft objects are extracted from SAX parser:" + Arrays.deepToString(aircraftsFromStax.toArray()));
 
     }

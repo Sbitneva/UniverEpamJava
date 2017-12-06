@@ -88,6 +88,4 @@ public class DomXmlParser {
         }
         return aircrafts;
     }
-
-
 }
