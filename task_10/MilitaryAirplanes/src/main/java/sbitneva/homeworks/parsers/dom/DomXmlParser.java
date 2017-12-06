@@ -1,4 +1,4 @@
-package app;
+package parsers.dom;
 
 import entities.AircraftWithAmmunition;
 import entities.Aircraft;

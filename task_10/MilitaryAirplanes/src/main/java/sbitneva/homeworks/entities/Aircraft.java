@@ -127,6 +127,7 @@ public class Aircraft {
 
         public void setWidth(int width) {
             this.width = width;
+            log.debug("Aircraft width is set to " + width);
         }
 
         public int getLenght() {
@@ -135,6 +136,7 @@ public class Aircraft {
 
         public void setLenght(int lenght) {
             this.lenght = lenght;
+            log.debug("Aircraft lenght is set to " + lenght);
         }
 
         public int getHeight() {
@@ -143,6 +145,7 @@ public class Aircraft {
 
         public void setHeight(int height) {
             this.height = height;
+            log.debug("Aircraft height is set to " + height);
         }
 
 

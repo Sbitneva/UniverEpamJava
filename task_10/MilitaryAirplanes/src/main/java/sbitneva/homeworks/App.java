@@ -1,8 +1,9 @@
-import app.DomXmlParser;
-import app.SaxXmlParser;
+import parsers.dom.DomXmlParser;
+import parsers.sax.SaxXmlParser;
 import entities.AircraftWithAmmunition;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import parsers.stax.StaxXmlParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,13 +37,18 @@ public class App
     public static void main(String[] args)
     {
         BasicConfigurator.configure();
-        //String log4jConfPath = "app.log";
-        //PropertyConfigurator.configure(log4jConfPath);
+
         DomXmlParser domXmlParser = new DomXmlParser();
-        ArrayList<AircraftWithAmmunition> aircrafts = domXmlParser.read("xml/aircraft_set_new.xml");
-        log.debug("Aircraft objects are extracted:" + Arrays.deepToString(aircrafts.toArray()));
+        ArrayList<AircraftWithAmmunition> aircraftsFromDom = domXmlParser.read("xml/aircraft_set_new.xml");
+        log.debug("Aircraft objects are extracted from DOM parser:" + Arrays.deepToString(aircraftsFromDom.toArray()));
+
         SaxXmlParser saxXmlParser = new SaxXmlParser();
-        saxXmlParser.getObjects("xml/aircraft_set_new.xml");
+        ArrayList<AircraftWithAmmunition> aircraftsFromSax = saxXmlParser.getObjects("xml/aircraft_set_new.xml");
+        log.debug("Aircraft objects are extracted from SAX parser:" + Arrays.deepToString(aircraftsFromSax.toArray()));
+
+        StaxXmlParser staxXmlParser = new StaxXmlParser();
+        ArrayList<AircraftWithAmmunition> aircraftsFromStax = staxXmlParser.getAircrafts("xml/aircraft_set_new.xml");
+        log.debug("Aircraft objects are extracted from SAX parser:" + Arrays.deepToString(aircraftsFromStax.toArray()));
 
     }
 }

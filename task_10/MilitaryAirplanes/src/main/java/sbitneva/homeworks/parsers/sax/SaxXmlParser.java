@@ -1,4 +1,4 @@
-package app;
+package parsers.sax;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -6,10 +6,8 @@ import javax.xml.parsers.SAXParserFactory;
 
 import entities.AircraftWithAmmunition;
 import org.apache.log4j.Logger;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.File;
 import java.io.IOException;
