@@ -56,15 +56,15 @@ public class DomXmlParser {
 
                 AircraftWithAmmunition militaryAircraft = AircraftWithAmmunition.aircraftWithAmmunitionFactory();
                 Element plane = (Element) aircraftsList.item(i);
-                if(plane.getElementsByTagName("type").item(0).getTextContent() == "reconnaissance"){
-                    militaryAircraft.setAmmunition(Byte.valueOf(plane.getElementsByTagName("ammunition").
-                            item(0).getTextContent()));
 
-                }
                 militaryAircraft.setId(plane.getElementsByTagName("id").item(0).getTextContent());
                 militaryAircraft.setModel(plane.getElementsByTagName("model").item(0).getTextContent());
                 militaryAircraft.setOrigin(plane.getElementsByTagName("origin").item(0).getTextContent());
                 militaryAircraft.setType(plane.getElementsByTagName("type").item(0).getTextContent());
+                if(!militaryAircraft.getType().equals("reconnaissance")) {
+                    militaryAircraft.setAmmunition(Byte.valueOf(plane.getElementsByTagName("ammunition").
+                            item(0).getTextContent()));
+                }
                 militaryAircraft.setSeats(Byte.valueOf(plane.getElementsByTagName("seats").item(0).getTextContent()));
 
                 militaryAircraft.setRadar(Boolean.valueOf(plane.getElementsByTagName("radar").item(0).getTextContent()));

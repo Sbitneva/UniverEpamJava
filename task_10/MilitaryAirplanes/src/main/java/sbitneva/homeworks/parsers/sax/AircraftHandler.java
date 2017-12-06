@@ -23,6 +23,7 @@ public class AircraftHandler extends DefaultHandler {
     private boolean bWidth;
     private boolean bHeight;
     private boolean bLength;
+    private boolean bAmmunition;
 
     private String thisElement;
     private static Logger log = Logger.getLogger(AircraftHandler.class.getName());
@@ -65,6 +66,8 @@ public class AircraftHandler extends DefaultHandler {
             bLength = true;
         }else if(qName.equals("height")){
             bHeight = true;
+        }else if(qName.equals("ammunition")){
+            bAmmunition = true;
         }
     }
 
@@ -107,6 +110,9 @@ public class AircraftHandler extends DefaultHandler {
         else if (bHeight) {
             parameters.setHeight(new Integer(new String(ch, start, length)));
             bHeight = false;
+        }else if (bAmmunition) {
+            militaryAircraft.setAmmunition(new Byte(new String(ch, start, length)));
+            bAmmunition = false;
         }
     }
 

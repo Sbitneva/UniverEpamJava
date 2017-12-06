@@ -1,6 +1,6 @@
 package entities;
 
-import exceptions.MilitaryAircraftException;
+import exceptions.AircraftException;
 import org.apache.log4j.Logger;
 
 public class Aircraft {
@@ -66,9 +66,9 @@ public class Aircraft {
     public void setSeats(int seats) {
         try{
             if((seats > 2)||(seats < 1)){
-                throw new MilitaryAircraftException("Invalid seats value");
+                throw new AircraftException("Invalid seats value");
             }
-        }catch (MilitaryAircraftException e){
+        }catch (AircraftException e){
             log.error(e.getMessage());
             return;
         }
