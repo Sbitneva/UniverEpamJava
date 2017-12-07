@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<plane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <id>2</id>
+    <model>string</model>
+    <origin>string</origin>
+    <type>maritime patrol</type>
+    <seats>2</seats>
+    <ammunition>1</ammunition>
+    <radar>1</radar>
+    <parameters>
+        <width>749033706</width>
+        <lenght>2804824097</lenght>
+        <height>1547700055</height>
+    </parameters>
+    <price>6687264</price>
+</plane>

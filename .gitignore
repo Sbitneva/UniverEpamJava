@@ -2,4 +2,4 @@
 target/
 *.class
 *.iml
-
+*.log
