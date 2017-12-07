@@ -15,7 +15,7 @@
 |  8 | 2017.11.23 | [**Regular expressions, text parsing**](task8_23_11_2017/BookParser) |
 |  9 | 2017.11.24 | [**Deque, calculator**](task9_24_11_2017/Calculator) |
 | 10 | 2017.11.28 | [**XML language parsing, logging, military aircrafts**](task10_28_11_2017/MilitaryAirplanes) |
-| 11 | 2017.12.01 | Object serialization, figures |
+| 11 | 2017.12.01 | [**Object serialization, figures**](task11_01_12_2017/TriangleSerialization) |
 | 12 | 2017.12.05 | Threading, master/slave pattern, wrong bees |
 | 13 | 2017.12.05 | Threading, producer/consumer pattern, assets theft |
 | 14 | 2017.12.05 | Threading, divide and conquer pattern, fist way |
