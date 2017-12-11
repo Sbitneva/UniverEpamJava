@@ -34,19 +34,16 @@ public class Bee extends Thread{
             System.out.println(this.name + " is working");
             synchronized (tasks) {
                 currentTask = tasks.poll();
-                System.out.println("tasks amount " + tasks.size());
             }
             if(currentTask != null) {
-                int taskData[][] = currentTask.getTaskData();
-                for (int i = 0; i < currentTask.getRows(); i++) {
-                    for (int j = 0; j < currentTask.getColumns(); j++) {
-                        if (taskData[i][j] == 1) {
-                            System.out.println("Bee" + this.name + " found Winnie Pooh");
-                            System.out.println("Winnie is here!!! In " + currentTask.getRowIndexes().get(i) +
-                                    " row " + "and " + j + " column");
-                            Main.found = true;
-                            return;
-                        }
+                int taskData[] = currentTask.getTaskData();
+                for (int i = 0; i < currentTask.getTaskData().length; i++) {
+                    if (taskData[i] == 1) {
+                        System.out.println(this.name + " found Winnie Pooh");
+                        System.out.println("Winnie is here!!! In " + currentTask.getTaskIndex() +
+                                " row " + "and " + i + " column");
+                        Main.found = true;
+                        return;
                     }
                 }
                 System.out.println(this.name + " did't found Winnie");

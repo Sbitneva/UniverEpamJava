@@ -10,12 +10,11 @@ import java.util.Queue;
 public class Main{
     public static Boolean found = false;
     private static ArrayList<Bee> beeQueue = new ArrayList<>();
-    public static Queue<Task> taskQueue;
+    private static Queue<Task> taskQueue;
 
     public static void main(String...args) {
-        final int tasksNumber = 23;
         final int beesNumber = 10;
-        Forest forest = new Forest("src/main/resources/forest_map.txt", tasksNumber);
+        Forest forest = new Forest("src/main/resources/forest_map.txt");
 
         taskQueue = forest.getTasks();
 

@@ -14,11 +14,10 @@ public class Forest {
     private int [][] forestMatrix;
     private int nRows;
     private int mColumns;
-    private int sliceSize;
     private Queue<Task> tasks = new LinkedList<>();
 
 
-    public Forest(String filePath, int tasksNumber){
+    public Forest(String filePath){
         File file = new File(filePath);
         if(file.exists()) {
             try {
@@ -31,12 +30,8 @@ public class Forest {
                         forestMatrix[i][j] = input.nextInt();
                     }
                 }
-                this.sliceSize = nRows/tasksNumber;
-
-                int i = 0;
-                while(i < forestMatrix.length){
-                    tasks.add(new Task(i, sliceSize, forestMatrix));
-                    i = i + sliceSize;
+                for(int i = 0; i < nRows; i++){
+                    tasks.add(new Task(i, forestMatrix[i]));
                 }
             } catch (FileNotFoundException e) {
                 log.error(e.getMessage());
@@ -54,10 +49,6 @@ public class Forest {
 
     public int[][] getForestMatrix() {
         return forestMatrix;
-    }
-
-    public int getSliceSize() {
-        return sliceSize;
     }
 
     @Override
