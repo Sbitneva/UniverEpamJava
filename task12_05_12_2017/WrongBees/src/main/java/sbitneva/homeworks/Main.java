@@ -4,12 +4,12 @@ import sbitneva.homeworks.entities.Bee;
 import sbitneva.homeworks.entities.Forest;
 import sbitneva.homeworks.entities.Task;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Queue;
 
 public class Main{
     public static Boolean found = false;
-    public static Queue<Bee> beeQueue = new LinkedList<>();
+    private static ArrayList<Bee> beeQueue = new ArrayList<>();
     public static Queue<Task> taskQueue;
 
     public static void main(String...args) {
@@ -19,34 +19,19 @@ public class Main{
 
         taskQueue = forest.getTasks();
 
-        int i = 0;
-        while(i < beesNumber){
-            beeQueue.add(new Bee(i, taskQueue, beeQueue));
-            i++;
+        for(int i = 0; i < beesNumber; i++){
+            beeQueue.add(new Bee(i, taskQueue));
+            beeQueue.get(i).start();
         }
 
-        i = 0;
-        while (i < beesNumber){
-            Bee bee = beeQueue.poll();
-            bee.start();
-            i++;
-        }
+        for (int i = 0; i < beesNumber; i++) {
+            try {
+                beeQueue.get(i).join();
+            } catch (InterruptedException e) {
 
-        while(!Main.found) {
-            synchronized (beeQueue) {
-                while(!beeQueue.isEmpty()) {
-                    if (Main.found) {
-                        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-                        break;
-                    } else {
-                        Bee bee = beeQueue.poll();
-                        synchronized (bee) {
-                            bee.notify();
-                        }
-                    }
-                }
             }
         }
+
         System.out.println("The end of searching! " + beeQueue.size());
     }
 }
