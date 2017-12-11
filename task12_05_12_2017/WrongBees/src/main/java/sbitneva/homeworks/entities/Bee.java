@@ -10,7 +10,7 @@ public class Bee extends Thread{
     private String name;
     private Queue<Task> tasks;
 
-    public Bee(int id, Queue tasks){
+    public Bee(int id, Queue<Task> tasks){
         this.name = "Bee #" + id;
         this.tasks = tasks;
         System.out.println(this.toString());

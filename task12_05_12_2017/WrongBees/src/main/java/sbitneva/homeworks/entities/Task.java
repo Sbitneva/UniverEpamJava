@@ -19,8 +19,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "taskIndex=" + taskIndex +
-                '}';
+        return "Task{" + "taskIndex=" + taskIndex + '}';
     }
 }
