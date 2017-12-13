@@ -30,8 +30,7 @@ public class Main {
         Football football = null;
         try {
             football = FootballFactory.create("FOOTBALL", "localhost", 3306);
-            //football.addPlayer();
-            //football.addTeam();
+
             System.out.println("=======================");
             System.out.println("Teams table content :");
             System.out.println("=======================");
@@ -74,6 +73,8 @@ public class Main {
             System.out.println("Teams table content :");
             System.out.println("=======================");
             System.out.println(football.showTeam());
+
+            football.stop();
 
         }catch (Exception e){
             log.error(e.getMessage());

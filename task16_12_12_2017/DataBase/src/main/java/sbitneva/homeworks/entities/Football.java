@@ -9,8 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Football {
-    private static int id_p;
-    private static int id_t;
+
     static Logger log = Logger.getLogger(Football.class.getName());
     private Connection con = null; // соединение с БД
     private PreparedStatement stmt = null;
