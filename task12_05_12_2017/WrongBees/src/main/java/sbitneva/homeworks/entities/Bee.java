@@ -42,6 +42,8 @@ public class Bee extends Thread{
                         System.out.println(this.name + " found Winnie Pooh");
                         System.out.println("Winnie is here!!! In " + currentTask.getTaskIndex() +
                                 " row " + "and " + i + " column");
+                        Main.row = currentTask.getTaskIndex();
+                        Main.column = i;
                         Main.found = true;
                         return;
                     }

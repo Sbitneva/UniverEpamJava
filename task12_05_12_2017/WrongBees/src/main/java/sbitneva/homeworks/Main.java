@@ -9,7 +9,9 @@ import java.util.Queue;
 
 public class Main{
     public static Boolean found = false;
-    private static ArrayList<Bee> beeQueue = new ArrayList<>();
+    public static ArrayList<Bee> beeQueue = new ArrayList<>();
+    public static int row = 0;
+    public static int column = 0;
 
     public static void main(String...args) {
         final int beesNumber = 10;
