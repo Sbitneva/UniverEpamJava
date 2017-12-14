@@ -19,5 +19,5 @@
 | 12 | 2017.12.05 | Threading, master/slave pattern, wrong bees |
 | 13 | 2017.12.05 | Threading, producer/consumer pattern, assets theft |
 | 14 | 2017.12.05 | Threading, divide and conquer pattern, tournament |
-| 15 | 2017.12.07 | Concurrency, airport |
-| 16 | 2017.12.12 | DB, football teams, players |
+| 15 | 2017.12.07 | Threading, airport |
+| 16 | 2017.12.12 | [**DB, football teams, players**](task16_12_12_2017/DataBase) |
