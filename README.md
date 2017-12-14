@@ -18,4 +18,6 @@
 | 11 | 2017.12.01 | [**Object serialization, figures**](task11_01_12_2017/TriangleSerialization) |
 | 12 | 2017.12.05 | Threading, master/slave pattern, wrong bees |
 | 13 | 2017.12.05 | Threading, producer/consumer pattern, assets theft |
-| 14 | 2017.12.05 | Threading, divide and conquer pattern, fist way |
+| 14 | 2017.12.05 | Threading, divide and conquer pattern, tournament |
+| 15 | 2017.12.07 | Concurrency, airport |
+| 16 | 2017.12.12 | DB, football teams, players |
