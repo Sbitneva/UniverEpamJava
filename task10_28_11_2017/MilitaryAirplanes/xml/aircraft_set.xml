@@ -21,7 +21,7 @@
         <type>maritime patrol</type>
         <seats>2</seats>
         <ammunition>1</ammunition>
-        <radar>1</radar>
+        <radar>true</radar>
         <parameters>
             <width>74933706</width>
             <length>28048097</length>
@@ -33,7 +33,7 @@
         <id>3</id>
         <model>J-11</model>
         <origin>China</origin>
-        <type>multirole combat</type>
+        <type>attack</type>
         <seats>2</seats>
         <ammunition>3</ammunition>
         <radar>true</radar>

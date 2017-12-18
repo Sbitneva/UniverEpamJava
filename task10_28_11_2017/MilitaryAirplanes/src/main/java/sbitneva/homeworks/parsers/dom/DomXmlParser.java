@@ -1,11 +1,12 @@
-package parsers.dom;
+package sbitneva.homeworks.parsers.dom;
 
-import entities.AircraftWithAmmunition;
-import entities.Aircraft;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import sbitneva.homeworks.entities.Aircraft;
+import sbitneva.homeworks.entities.AircraftWithAmmunition;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -14,45 +15,41 @@ import java.util.ArrayList;
 
 public class DomXmlParser {
 
-    static Logger log = Logger.getLogger(DomXmlParser.class.getName());
-    DocumentBuilderFactory dbf = null;
-    DocumentBuilder db = null;
+    private static Logger log = Logger.getLogger(DomXmlParser.class.getName());
+    private DocumentBuilderFactory dbf = null;
+    private DocumentBuilder db = null;
 
-    public DomXmlParser(){
-        try
-        {
+    public DomXmlParser() {
+        try {
             dbf = DocumentBuilderFactory.newInstance();
             db = dbf.newDocumentBuilder();
-        }
-        catch(ParserConfigurationException e)
-        {
+        } catch (ParserConfigurationException e) {
             log.error("DocumentBuilder exception" + e.getMessage());
         }
     }
 
-    public ArrayList<AircraftWithAmmunition> read(String path){
+    public ArrayList<AircraftWithAmmunition> read(String path) {
         ArrayList<AircraftWithAmmunition> aircrafts = new ArrayList<>();
         Document doc = null;
-        try{
+        try {
             doc = db.parse(new File(path));
             log.debug("Document from file " + path + "is created");
 
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             log.error("Document from file " + path + "doesn't created " + e.getMessage());
             return null;
         }
 
         Element root = doc.getDocumentElement();
 
-        if(root.getTagName().equals("planes")){
+        if (root.getTagName().equals("planes")) {
 
             NodeList aircraftsList = root.getElementsByTagName("plane");
 
 
             System.out.println(" Length::" + aircraftsList.getLength());
 
-            for(int i = 0; i < aircraftsList.getLength(); i++){
+            for (int i = 0; i < aircraftsList.getLength(); i++) {
 
                 AircraftWithAmmunition militaryAircraft = AircraftWithAmmunition.aircraftWithAmmunitionFactory();
                 Element plane = (Element) aircraftsList.item(i);
@@ -61,7 +58,7 @@ public class DomXmlParser {
                 militaryAircraft.setModel(plane.getElementsByTagName("model").item(0).getTextContent());
                 militaryAircraft.setOrigin(plane.getElementsByTagName("origin").item(0).getTextContent());
                 militaryAircraft.setType(plane.getElementsByTagName("type").item(0).getTextContent());
-                if(!militaryAircraft.getType().equals("reconnaissance")) {
+                if (!militaryAircraft.getType().equals("reconnaissance")) {
                     militaryAircraft.setAmmunition(Byte.valueOf(plane.getElementsByTagName("ammunition").
                             item(0).getTextContent()));
                 }
@@ -70,7 +67,7 @@ public class DomXmlParser {
                 militaryAircraft.setRadar(Boolean.valueOf(plane.getElementsByTagName("radar").item(0).getTextContent()));
                 militaryAircraft.setPrice(Integer.valueOf(plane.getElementsByTagName("price").item(0).getTextContent()));
 
-                Element parameters = (Element)plane.getElementsByTagName("parameters").item(0);
+                Element parameters = (Element) plane.getElementsByTagName("parameters").item(0);
 
                 Aircraft.AircraftParameters aircraftParameters = new Aircraft.AircraftParameters();
 
