@@ -1,6 +1,5 @@
 package sbitneva.homeworks;
 
-import org.junit.Before;
 import org.junit.Test;
 import sbitneva.homeworks.entities.Football;
 import sbitneva.homeworks.factories.FootballFactory;
@@ -10,10 +9,10 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class TestDB {
+    Football football = null;
 
     @Test
-    public void testDB(){
-        Football football = null;
+    public void testDB() {
         try {
             football = FootballFactory.create("FOOTBALL", "localhost", 3306);
             assertTrue(football != null);
@@ -33,19 +32,13 @@ public class TestDB {
             football.deleteTeam(6);
             String teamsAfterDeleting = football.showTeam();
 
-            System.out.println(playersAfterDeleting);
-            System.out.println(teamsBeforeAdding);
-            System.out.println(playersBeforeAdding);
-            System.out.println(teamsAfterAdding);
-            System.out.println(teamsAfterDeleting);
-
             assertFalse(playersAfterAdding.equals(playersBeforeAdding));
             assertFalse(teamsBeforeAdding.equals(teamsAfterAdding));
             assertEquals(playersAfterDeleting, playersBeforeAdding);
             assertEquals(teamsAfterDeleting, teamsBeforeAdding);
 
             football.stop();
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
