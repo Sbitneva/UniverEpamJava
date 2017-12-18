@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 /**
  * @author Sbitnieva Mariia
- *
+ * <p>
  * 1. Создать файл XML и соответствующую ему схему XSD.
  * <p>
  * 2. При разработке XSD использовать простые и комплексные типы,
@@ -37,14 +37,14 @@ import java.util.Arrays;
  */
 
 public class Main {
-    private static Logger log = Logger.getLogger(Main.class.getName());
     private static final String xsdFilePath = "aircraft.xsd";
     private static final String xmlFilePath = "xml/aircraft_set.xml";
+    private static Logger log = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         BasicConfigurator.configure();
 
-        if(XmlValidator.validateAccordingToSchema(xsdFilePath, xmlFilePath)) {
+        if (XmlValidator.validateAccordingToSchema(xsdFilePath, xmlFilePath)) {
 
             DomXmlParser domXmlParser = new DomXmlParser();
             ArrayList<AircraftWithAmmunition> aircraftsFromDom =

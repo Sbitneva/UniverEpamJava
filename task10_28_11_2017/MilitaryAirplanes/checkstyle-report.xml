@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.4">
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/validator/XmlValidator.java">
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/parsers/stax/StaxXmlParser.java">
+<error line="24" column="9" severity="error" message="Got an exception - expecting EOF, found &apos;AircraftWithAmmunition&apos;" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/parsers/sax/AircraftHandler.java">
+<error line="32" column="5" severity="error" message="Got an exception - expecting EOF, found &apos;}&apos;" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/parsers/sax/SaxXmlParser.java">
+<error line="37" column="9" severity="error" message="Got an exception - expecting EOF, found &apos;XMLReader&apos;" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/parsers/dom/DomXmlParser.java">
+<error line="33" column="9" severity="error" message="Got an exception - expecting EOF, found &apos;Document&apos;" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/entities/Aircraft.java">
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/entities/AircraftWithAmmunition.java">
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/exceptions/AircraftWithAmmunitionException.java">
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/exceptions/AircraftException.java">
+</file>
+<file name="/home/mariia/Documents/MavenProjects/UniverEpamJava/UniverEpamJava/task10_28_11_2017/MilitaryAirplanes/src/main/java/sbitneva/homeworks/Main.java">
+</file>
+</checkstyle>
