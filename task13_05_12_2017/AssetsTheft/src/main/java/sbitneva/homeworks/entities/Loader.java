@@ -5,7 +5,7 @@ import sbitneva.homeworks.Main;
 public class Loader extends Thread {
     SmallQ middleQ;
 
-    public Loader(){
+    public Loader(SmallQ middleQ){
         middleQ = new SmallQ();
         try{
             sleep(2000);

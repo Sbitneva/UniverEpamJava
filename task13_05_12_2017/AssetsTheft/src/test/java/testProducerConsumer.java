@@ -23,7 +23,6 @@ public class testProducerConsumer {
     SmallQ middleQueue = new SmallQ();
 
     Thief thief;
-    Loader loader;
     Accountant accountant;
 
     @Before
@@ -34,11 +33,10 @@ public class testProducerConsumer {
         }
         inputQueue = new BigQ(in);
         thief = new Thief(inputQueue, middleQueue);
-        loader = new Loader();
         accountant = new Accountant(middleQueue, inputQueue.size());
+
         try{
             thief.join();
-            loader.join(5000);
             accountant.join();
         }catch(InterruptedException e){
             System.out.println(e.getMessage());

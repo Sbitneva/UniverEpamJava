@@ -17,11 +17,9 @@ public class Main{
         SmallQ middleQueue = new SmallQ();
 
         Thief thief = new Thief(inputQueue, middleQueue);
-        Loader loader = new Loader();
         Accountant accountant = new Accountant(middleQueue, inputQueue.size());
         try{
             thief.join();
-            loader.join(5000);
             accountant.join();
         }catch(InterruptedException e){
             System.out.println(e.getMessage());
