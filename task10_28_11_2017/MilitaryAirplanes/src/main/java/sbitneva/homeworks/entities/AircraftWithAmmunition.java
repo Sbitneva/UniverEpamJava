@@ -20,7 +20,8 @@ public class AircraftWithAmmunition extends Aircraft {
     public void setAmmunition(byte ammunition) {
         try {
             if ((ammunition < 0) || (ammunition > 10)) {
-                throw new AircraftWithAmmunitionException("Invalid ammunition parameter. Value must be in [0..10] range");
+                throw new AircraftWithAmmunitionException("Invalid ammunition parameter." +
+                        " Value must be in [0..10] range");
             }
         } catch (AircraftWithAmmunitionException e) {
             log.error(e.getMessage());

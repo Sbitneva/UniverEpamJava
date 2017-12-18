@@ -34,7 +34,7 @@ public class SaxXmlParser {
 
         AircraftHandler handler = new AircraftHandler();
         ArrayList<AircraftWithAmmunition> militaryAircrafts = new ArrayList<>();
-        XMLReader xmlReader = null;
+        XMLReader xmlReader;
         try {
             xmlReader = saxParser.getXMLReader();
         } catch (SAXException e) {
