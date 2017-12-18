@@ -1,21 +1,22 @@
-import entities.AircraftWithAmmunition;
+package sbitneva.homeworks;
+import sbitneva.homeworks.entities.AircraftWithAmmunition;
 import org.junit.Before;
 import org.junit.Test;
-import parsers.dom.DomXmlParser;
-import parsers.sax.SaxXmlParser;
-import parsers.stax.StaxXmlParser;
+import sbitneva.homeworks.parsers.dom.DomXmlParser;
+import sbitneva.homeworks.parsers.sax.SaxXmlParser;
+import sbitneva.homeworks.parsers.stax.StaxXmlParser;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
 public class TestParsers {
-    final String path = "xml/aircraft_set.xml";
-    DomXmlParser domXmlParser = null;
-    SaxXmlParser saxXmlParser = null;
-    StaxXmlParser staxXmlParser = null;
-    ArrayList<AircraftWithAmmunition> aircraftsFromDom = null;
-    ArrayList<AircraftWithAmmunition> aircraftsFromSax = null;
-    ArrayList<AircraftWithAmmunition> aircraftsFromStax = null;
+    private final String path = "xml/aircraft_set.xml";
+    private DomXmlParser domXmlParser = null;
+    private SaxXmlParser saxXmlParser = null;
+    private StaxXmlParser staxXmlParser = null;
+    private ArrayList<AircraftWithAmmunition> aircraftsFromDom = null;
+    private ArrayList<AircraftWithAmmunition> aircraftsFromSax = null;
+    private ArrayList<AircraftWithAmmunition> aircraftsFromStax = null;
 
 
     @Before

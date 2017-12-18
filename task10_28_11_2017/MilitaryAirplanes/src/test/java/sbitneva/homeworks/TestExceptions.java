@@ -1,8 +1,7 @@
-import entities.Aircraft;
-import entities.AircraftWithAmmunition;
+package sbitneva.homeworks;
 
+import sbitneva.homeworks.entities.AircraftWithAmmunition;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class TestExceptions {

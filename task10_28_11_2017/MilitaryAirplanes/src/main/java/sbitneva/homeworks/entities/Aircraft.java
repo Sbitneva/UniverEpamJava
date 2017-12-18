@@ -1,10 +1,10 @@
-package entities;
+package sbitneva.homeworks.entities;
 
-import exceptions.AircraftException;
 import org.apache.log4j.Logger;
+import sbitneva.homeworks.exceptions.AircraftException;
 
 public class Aircraft {
-    static Logger log = Logger.getLogger(Aircraft.class.getName());
+    private static final Logger log = Logger.getLogger(Aircraft.class.getName());
     private String id;
     private String model;
     private String origin;
@@ -14,8 +14,12 @@ public class Aircraft {
     private int price;
     private AircraftParameters parameters;
 
-    public Aircraft(){
+    public Aircraft() {
         parameters = new AircraftParameters();
+    }
+
+    public static Aircraft militaryAircraftFactory() {
+        return new Aircraft();
     }
 
     public int getPrice() {
@@ -29,10 +33,6 @@ public class Aircraft {
 
     public String getId() {
         return id;
-    }
-
-    public static Aircraft militaryAircraftFactory() {
-        return new Aircraft();
     }
 
     public void setId(String id) {
@@ -64,11 +64,11 @@ public class Aircraft {
     }
 
     public void setSeats(int seats) {
-        try{
-            if((seats > 2)||(seats < 1)){
+        try {
+            if ((seats > 2) || (seats < 1)) {
                 throw new AircraftException("Invalid seats value");
             }
-        }catch (AircraftException e){
+        } catch (AircraftException e) {
             log.error(e.getMessage());
             return;
         }
@@ -112,12 +112,13 @@ public class Aircraft {
                 "parameters=" + parameters +
                 "\n";
     }
+
     public static class AircraftParameters {
         private int width = 0;
         private int lenght = 0;
         private int height = 0;
 
-        public AircraftParameters(){
+        public AircraftParameters() {
 
         }
 

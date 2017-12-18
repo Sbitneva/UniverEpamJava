@@ -1,44 +1,43 @@
-package parsers.sax;
+package sbitneva.homeworks.parsers.sax;
+
+import org.apache.log4j.Logger;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import sbitneva.homeworks.entities.AircraftWithAmmunition;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import entities.AircraftWithAmmunition;
-import org.apache.log4j.Logger;
-import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class SaxXmlParser {
 
-    static Logger log = Logger.getLogger(SaxXmlParser.class.getName());
-    SAXParserFactory factory;
-    SAXParser saxParser;
+    private static Logger log = Logger.getLogger(SaxXmlParser.class.getName());
+    private SAXParserFactory factory;
+    private SAXParser saxParser;
 
-    public SaxXmlParser(){
+    public SaxXmlParser() {
 
-        try{
+        try {
             factory = SAXParserFactory.newInstance();
             saxParser = factory.newSAXParser();
-        }catch (SAXException e){
+        } catch (SAXException e) {
             log.error(e.getMessage());
-        }catch(ParserConfigurationException ex){
+        } catch (ParserConfigurationException ex) {
             log.error(ex.getMessage());
         }
     }
 
-    public ArrayList<AircraftWithAmmunition> getObjects(String path){
+    public ArrayList<AircraftWithAmmunition> getObjects(String path) {
 
         AircraftHandler handler = new AircraftHandler();
         ArrayList<AircraftWithAmmunition> militaryAircrafts = new ArrayList<>();
         XMLReader xmlReader = null;
-        try{
+        try {
             xmlReader = saxParser.getXMLReader();
-        }catch(SAXException e){
+        } catch (SAXException e) {
             log.error(e.getMessage());
             return null;
         }
@@ -46,10 +45,10 @@ public class SaxXmlParser {
         File xmlFile = new File(path);
         try {
             xmlReader.parse(xmlFile.toURI().toString());
-        }catch (IOException e){
+        } catch (IOException e) {
             log.error(e.getMessage());
             return null;
-        }catch (SAXException ex){
+        } catch (SAXException ex) {
             log.error(ex.getMessage());
             return null;
         }
