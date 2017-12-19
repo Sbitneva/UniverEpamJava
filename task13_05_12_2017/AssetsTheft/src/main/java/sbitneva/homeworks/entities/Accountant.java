@@ -1,29 +1,31 @@
 package sbitneva.homeworks.entities;
 
+import org.apache.log4j.Logger;
 import sbitneva.homeworks.Main;
 
 public class Accountant extends Thread {
-    private SmallQ middleQ;
+    private static Logger log = Logger.getLogger(Accountant.class.getName());
+    private Loader loader;
     private int result;
     private int endCounter;
 
-    public Accountant(SmallQ middleQ, int endCounter){
+    public Accountant(Loader loader, int endCounter) {
         this.endCounter = endCounter;
-        this.middleQ = middleQ;
-        try{
+        this.loader = loader;
+        try {
             sleep(2000);
-        }catch (InterruptedException e){
-            System.out.println(e.getMessage());
+        } catch (InterruptedException e) {
+            log.error(e.getMessage());
         }
         start();
     }
 
     @Override
-    public void run(){
+    public void run() {
         int n = 0;
-        while(endCounter >= 0){
-            if(middleQ.valueSet){
-                result += middleQ.get();
+        while (endCounter >= 0) {
+            if (loader.valueSet()) {
+                result += loader.get();
                 n++;
                 System.out.println("Accountant got " + n + " asset");
                 --endCounter;
@@ -31,9 +33,13 @@ public class Accountant extends Thread {
         }
         Main.end_calc = true;
         Main.result = result;
-        System.out.println("Total value of assets is " +  result);
-        System.out.println("END of Accountant " +  result);
-        System.out.println("Main.end_calc = " +  Main.end_calc);
+
+        log.debug("Total value of assets is " + result);
+        log.debug("END of Accountant " + result);
+        log.debug("Main.end_calc = " + Main.end_calc);
     }
 
+    synchronized public int getResult(){
+        return this.result;
+    }
 }
