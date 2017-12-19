@@ -3,6 +3,30 @@ coverage:
   status:
     project:
       default: false
+      Figures:
+        paths: task4_14_11_2017/Figures/
+      WeatherClient:
+        paths: task5_16_11_2017/WeatherClient/
+      Transport:
+        paths: task6_16_11_2017/Transport/
+      WebParser:
+        paths: task7_23_11_2017/WebParser/
+      BookParser:
+        paths: task8_23_11_2017/BookParser/
+      Calculator:
+        paths: task9_24_11_2017/Calculator/
+      MilitaryAirplanes:
+        paths: task10_28_11_2017/MilitaryAirplanes/
+      TriangleSerialization:
+        paths: task11_01_12_2017/TriangleSerialization/
       WrongBees:
-        paths: task12_05_12_2017/WrongBees/    
+        paths: task12_05_12_2017/WrongBees/
+      AssetsTheft:
+        paths: task13_05_12_2017/AssetsTheft/
+      Tournament:
+        paths: task14_05_12_2017/Tournament/
+      Airport:
+        paths: task15_07_12_2017/Airport/
+      DataBase:
+        paths: task16_12_12_2017/DataBase/ 
 comment: false
