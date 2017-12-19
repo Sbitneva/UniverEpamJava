@@ -6,6 +6,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 import sbitneva.homeworks.entities.Aircraft;
 import sbitneva.homeworks.entities.AircraftWithAmmunition;
+import sbitneva.homeworks.parsers.Parser;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,7 @@ public class AircraftHandler extends DefaultHandler {
     private boolean bAmmunition;
     private String thisElement;
 
-    public ArrayList<AircraftWithAmmunition> getAircrafts() {
+    public ArrayList<AircraftWithAmmunition> getAircraftList() {
         return this.aircrafts;
     }
 
@@ -40,32 +41,32 @@ public class AircraftHandler extends DefaultHandler {
     public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
         log.debug("Start element " + qName);
         thisElement = qName;
-        if (qName == "plane") {
+        if (qName.equals(Parser.PLANE)) {
             log.debug("New plane is founded");
             militaryAircraft = new AircraftWithAmmunition();
             parameters = new AircraftWithAmmunition.AircraftParameters();
             militaryAircraft.setParameters(parameters);
-        } else if (qName.equals("id")) {
+        } else if (qName.equals(Parser.ID)) {
             bId = true;
-        } else if (qName.equals("model")) {
+        } else if (qName.equals(Parser.MODEL)) {
             bModel = true;
-        } else if (qName.equals("origin")) {
+        } else if (qName.equals(Parser.ORIGIN)) {
             bOrigin = true;
-        } else if (qName.equals("type")) {
+        } else if (qName.equals(Parser.TYPE)) {
             bType = true;
-        } else if (qName.equals("seats")) {
+        } else if (qName.equals(Parser.SEATS)) {
             bSeats = true;
-        } else if (qName.equals("radar")) {
+        } else if (qName.equals(Parser.RADAR)) {
             bRadar = true;
-        } else if (qName.equals("price")) {
+        } else if (qName.equals(Parser.PRICE)) {
             bPrice = true;
-        } else if (qName.equals("width")) {
+        } else if (qName.equals(Parser.WIDTH)) {
             bWidth = true;
-        } else if (qName.equals("length")) {
+        } else if (qName.equals(Parser.LENGTH)) {
             bLength = true;
-        } else if (qName.equals("height")) {
+        } else if (qName.equals(Parser.HEIGHT)) {
             bHeight = true;
-        } else if (qName.equals("ammunition")) {
+        } else if (qName.equals(Parser.AMMUNITION)) {
             bAmmunition = true;
         }
     }
@@ -110,7 +111,7 @@ public class AircraftHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        if (qName.equals("plane")) {
+        if (qName.equals(Parser.PLANE)) {
             aircrafts.add(militaryAircraft);
         }
     }

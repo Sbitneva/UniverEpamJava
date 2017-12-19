@@ -6,8 +6,8 @@ import sbitneva.homeworks.exceptions.AircraftException;
 public class Aircraft {
     private static final Logger log = Logger.getLogger(Aircraft.class.getName());
     private String id;
-    private String model;
-    private String origin;
+    private String model = "";
+    private String origin = "";
     private String type;
     private int seats;
     private boolean radar;
@@ -36,8 +36,10 @@ public class Aircraft {
     }
 
     public void setId(String id) {
-        this.id = id;
-        log.debug(Aircraft.class.getName() + " id is set to " + id);
+        if(id != null) {
+            this.id = id;
+            log.debug(Aircraft.class.getName() + " id is set to " + id);
+        }
     }
 
     public String getModel() {
@@ -57,7 +59,6 @@ public class Aircraft {
         this.origin = origin;
         log.debug(Aircraft.class.getName() + " origin is set to " + origin);
     }
-
 
     public int getSeats() {
         return seats;
