@@ -1,0 +1,23 @@
+---
+sudo: false
+language: java
+
+cache:
+  directories:
+    - $HOME/.m2
+
+jdk:
+  - oraclejdk8
+env:
+  - PROJECT_FLAG=WrongBees PROJECT_PATH=task12_05_12_2017/$PROJECT_FLAG
+
+install: true
+script:
+  - cd $PROJECT_PATH && mvn clean install
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -cF $PROJECT_FLAG
+
+branches:
+  only:
+    - master
