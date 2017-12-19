@@ -4,7 +4,7 @@ public class Task {
     private int taskIndex;
     private int taskData[];
 
-    public Task(int taskIndex, int matrix[]){
+    public Task(int taskIndex, int matrix[]) {
         this.taskIndex = taskIndex;
         this.taskData = matrix;
     }
