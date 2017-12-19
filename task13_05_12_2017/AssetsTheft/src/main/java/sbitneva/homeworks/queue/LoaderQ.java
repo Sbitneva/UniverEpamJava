@@ -1,14 +1,14 @@
-package sbitneva.homeworks.entities;
+package sbitneva.homeworks.queue;
 
-public class SmallQ {
-    int n;
-    boolean valueSet = false;
+public class LoaderQ {
+    private int     n;
+    private boolean valueSet = false;
 
-    synchronized int get(){
-        while(!valueSet){
-            try{
+    public synchronized int get() {
+        while (!valueSet) {
+            try {
                 wait();
-            }catch(InterruptedException e){
+            } catch (InterruptedException e) {
                 System.out.println("Get exception - " + e.getMessage());
             }
         }
@@ -18,11 +18,11 @@ public class SmallQ {
         return n;
     }
 
-    synchronized void put(int n){
-        while(valueSet){
-            try{
+    public synchronized void put(int n) {
+        while (valueSet) {
+            try {
                 wait();
-            }catch(InterruptedException e){
+            } catch (InterruptedException e) {
                 System.out.println("Put exception - " + e.getMessage());
             }
         }
@@ -30,5 +30,9 @@ public class SmallQ {
         this.n = n;
         valueSet = true;
         notify();
+    }
+
+    public synchronized boolean isValueSet() {
+        return this.valueSet;
     }
 }
