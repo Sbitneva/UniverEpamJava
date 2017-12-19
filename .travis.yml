@@ -9,7 +9,19 @@ cache:
 jdk:
   - oraclejdk8
 env:
-  - PROJECT_FLAG=WrongBees PROJECT_PATH=task12_05_12_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=Figures                PROJECT_PATH=task4_14_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=WeatherClient          PROJECT_PATH=task5_16_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=Transport              PROJECT_PATH=task6_16_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=WebParser              PROJECT_PATH=task7_23_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=BookParser             PROJECT_PATH=task8_23_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=Calculator             PROJECT_PATH=task9_24_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=MilitaryAirplanes      PROJECT_PATH=task10_28_11_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=TriangleSerialization  PROJECT_PATH=task11_01_12_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=WrongBees              PROJECT_PATH=task12_05_12_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=AssetsTheft            PROJECT_PATH=task13_05_12_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=Tournament             PROJECT_PATH=task14_05_12_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=Airport                PROJECT_PATH=task15_07_12_2017/$PROJECT_FLAG
+  - PROJECT_FLAG=DataBase               PROJECT_PATH=task16_12_12_2017/$PROJECT_FLAG
 
 install: true
 script:
