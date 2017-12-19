@@ -1,34 +1,29 @@
 package sbitneva.homeworks.entities;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import org.apache.log4j.Logger;
+import sbitneva.homeworks.Main;
+import sbitneva.homeworks.queue.MonkQueue;
 
 public class Tournament{
-    public static int tour_id = 0;
-   // public static Queue<Monk> winners = new LinkedList<>();
+    private static Logger log = Logger.getLogger(Main.class.getName());
+    private static int tour_id = 0;
 
-    public static  Queue<Monk> startTour(Queue<Monk> monks){
-        Queue<Monk> winners = new LinkedList<>();
-        //winners.clear();
+    public static MonkQueue startTour(MonkQueue monks){
+        MonkQueue winners = new MonkQueue();
         tour_id++;
-        System.out.println("Tour # " + tour_id + "starts");
-        System.out.println(monks.size());
+        log.debug("Tour # " + tour_id + "starts");
+
         while(monks.size() > 0){
             try{
                 Monk monk1 = monks.poll();
                 Monk monk2 = monks.poll();
-                System.out.println(monk1.getName() + " : " + monk2.getName());
+                log.debug(monk1.getName() + " : " + monk2.getName());
                 new Tour(monk1, monk2, winners).join();
             }catch (InterruptedException e){
-                System.out.println(e.getMessage());
+                log.error(e.getMessage());
             }
-            System.out.println(monks.size());
         }
-        System.out.println("winner size = " + winners.size());
         return winners;
     }
 
-    public Tournament(){
-
-    }
 }
