@@ -61,7 +61,7 @@ public class Main {
             StaxXmlParser staxXmlParser = new StaxXmlParser();
             ArrayList<AircraftWithAmmunition> aircraftsFromStax =
                     staxXmlParser.getAircrafts(xmlFilePath);
-            log.debug("Aircraft objects are extracted from SAX parser:" +
+            log.debug("Aircraft objects are extracted from StAX parser:" +
                     "" + Arrays.deepToString(aircraftsFromStax.toArray()));
         }
 
