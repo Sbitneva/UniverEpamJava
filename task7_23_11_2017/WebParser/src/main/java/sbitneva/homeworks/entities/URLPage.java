@@ -1,4 +1,4 @@
-package app.entities;
+package sbitneva.homeworks.entities;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

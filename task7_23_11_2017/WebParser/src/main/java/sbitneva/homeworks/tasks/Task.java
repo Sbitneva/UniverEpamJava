@@ -1,7 +1,7 @@
-package app.tasks;
+package sbitneva.homeworks.tasks;
 
-import app.entities.StatisticsPage;
-import app.entities.URLPage;
+import sbitneva.homeworks.entities.StatisticsPage;
+import sbitneva.homeworks.entities.URLPage;
 
 import java.net.URL;
 import java.util.*;
