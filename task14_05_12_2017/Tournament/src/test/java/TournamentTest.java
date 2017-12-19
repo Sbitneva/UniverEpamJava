@@ -21,7 +21,7 @@ public class TournamentTest {
         for (int i = 0; i < 31; i++) {
             monks.add(MonkFactory.create());
         }
-        
+
         bestMonk.setName("Vasya");
         bestMonk.setVillage("Kiev");
         bestMonk.setEnergy(2000);
