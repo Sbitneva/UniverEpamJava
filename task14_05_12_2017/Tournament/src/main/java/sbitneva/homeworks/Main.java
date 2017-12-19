@@ -45,8 +45,6 @@ public class Main {
                 winners = tournament.getWinners();
                 monks = winners;
                 tournament = new Tournament(monks);
-                log.debug(winners.size());
-                log.debug(monks.size());
             }
         }
         log.debug("Winner of the Tournament is..." + winners.peek().toString());
