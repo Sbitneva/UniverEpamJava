@@ -6,9 +6,9 @@ public class Monk {
     private String      village;
     private int         energy;
 
-    public Monk(){
+    public Monk() {
         id++;
-        this.name = "Name# " + id;
+        this.name = "Name # " + id;
         this.village = "";
     }
 

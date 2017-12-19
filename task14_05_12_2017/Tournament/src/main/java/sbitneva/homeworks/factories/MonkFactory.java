@@ -5,9 +5,9 @@ import sbitneva.homeworks.entities.Monk;
 import java.util.Random;
 
 public class MonkFactory {
+    private static String[] monks = {"In'", "Yan'"};
 
-    static String[] monks = {"In'", "Yan'"};
-    public static Monk create(){
+    public static Monk create() {
         Random r = new Random();
         Monk monk = new Monk();
         monk.setName("Monk #" + monk.getId());

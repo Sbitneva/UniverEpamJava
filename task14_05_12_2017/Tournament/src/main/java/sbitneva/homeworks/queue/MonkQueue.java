@@ -8,11 +8,11 @@ import java.util.Queue;
 public class MonkQueue {
     private Queue<Monk> monkQ;
 
-    public MonkQueue(){
+    public MonkQueue() {
         this.monkQ = new LinkedList<>();
     }
 
-    public MonkQueue(Queue<Monk> monkQ){
+    public MonkQueue(Queue<Monk> monkQ) {
         this.monkQ = monkQ;
     }
 
@@ -20,19 +20,19 @@ public class MonkQueue {
         return monkQ;
     }
 
-    synchronized public void add(Monk monk){
+    synchronized public void add(Monk monk) {
         monkQ.add(monk);
     }
 
-    synchronized public int size(){
+    synchronized public int size() {
         return monkQ.size();
     }
 
-    synchronized public Monk poll(){
+    synchronized public Monk poll() {
         return monkQ.poll();
     }
 
-    synchronized public Monk peek(){
+    synchronized public Monk peek() {
         return monkQ.peek();
     }
 }
