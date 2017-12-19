@@ -1,11 +1,9 @@
 package sbitneva.homeworks.parsers.stax;
 
-import com.sun.istack.internal.NotNull;
 import org.apache.log4j.Logger;
 import sbitneva.homeworks.entities.Aircraft;
 import sbitneva.homeworks.entities.AircraftWithAmmunition;
 import sbitneva.homeworks.parsers.Parser;
-
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -20,13 +18,13 @@ public class StaxXmlParser {
 
     private static Logger log = Logger.getLogger(StaxXmlParser.class.getName());
 
-    private ArrayList<AircraftWithAmmunition> aircrafts;
+    public ArrayList<AircraftWithAmmunition> getAircraftList(String path) {
 
-    public ArrayList<AircraftWithAmmunition> getAircrafts(String path) {
-        aircrafts = new ArrayList<>();
+        ArrayList<AircraftWithAmmunition> aircraftList = new ArrayList<>();
         AircraftWithAmmunition militaryAircraft = new AircraftWithAmmunition();
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         AircraftWithAmmunition.AircraftParameters parameters = new Aircraft.AircraftParameters();
+
         try {
             XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(path));
             while (xmlEventReader.hasNext()) {
@@ -75,13 +73,13 @@ public class StaxXmlParser {
                 if (xmlEvent.isEndElement()) {
                     EndElement endElement = xmlEvent.asEndElement();
                     if (endElement.getName().getLocalPart().equals(Parser.PLANE)) {
-                        aircrafts.add(militaryAircraft);
+                        aircraftList.add(militaryAircraft);
                     }
                 }
             }
         } catch (FileNotFoundException | XMLStreamException e) {
             log.error(e.getMessage());
         }
-        return aircrafts;
+        return aircraftList;
     }
 }

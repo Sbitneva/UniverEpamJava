@@ -60,7 +60,7 @@ public class Main {
 
             StaxXmlParser staxXmlParser = new StaxXmlParser();
             ArrayList<AircraftWithAmmunition> aircraftsFromStax =
-                    staxXmlParser.getAircrafts(xmlFilePath);
+                    staxXmlParser.getAircraftList(xmlFilePath);
             log.debug("Aircraft objects are extracted from StAX parser:" +
                     "" + Arrays.deepToString(aircraftsFromStax.toArray()));
         }
