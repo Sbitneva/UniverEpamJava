@@ -1,34 +1,44 @@
 package sbitneva.homeworks.entities;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import org.apache.log4j.Logger;
+import sbitneva.homeworks.Main;
+import sbitneva.homeworks.queue.MonkQueue;
 
-public class Tournament{
-    public static int tour_id = 0;
-   // public static Queue<Monk> winners = new LinkedList<>();
+public class Tournament extends Thread {
+    private static Logger   log = Logger.getLogger(Main.class.getName());
+    private static int      tour_id;
+    private MonkQueue       winners;
+    private MonkQueue       monks;
 
-    public static  Queue<Monk> startTour(Queue<Monk> monks){
-        Queue<Monk> winners = new LinkedList<>();
-        //winners.clear();
-        tour_id++;
-        System.out.println("Tour # " + tour_id + "starts");
-        System.out.println(monks.size());
-        while(monks.size() > 0){
-            try{
-                Monk monk1 = monks.poll();
-                Monk monk2 = monks.poll();
-                System.out.println(monk1.getName() + " : " + monk2.getName());
-                new Tour(monk1, monk2, winners).join();
-            }catch (InterruptedException e){
-                System.out.println(e.getMessage());
-            }
-            System.out.println(monks.size());
-        }
-        System.out.println("winner size = " + winners.size());
-        return winners;
+    public Tournament(MonkQueue monks) {
+        this.monks = monks;
+        this.winners = new MonkQueue();
+        start();
     }
 
-    public Tournament(){
+    public void run() {
+        tour_id++;
+        log.debug("Tour # " + tour_id + " starts");
 
+        while (monks.size() > 1) {
+            try {
+                sleep(200);
+            } catch (InterruptedException e) {
+                log.error(e.getMessage());
+            }
+
+            try {
+                Monk monk1 = monks.poll();
+                Monk monk2 = monks.poll();
+                log.debug(monk1.getName() + " : " + monk2.getName());
+                new Tour(monk1, monk2, winners).join();
+            } catch (InterruptedException e) {
+                log.error(e.getMessage());
+            }
+        }
+    }
+
+    public MonkQueue getWinners() {
+        return winners;
     }
 }

@@ -1,34 +1,49 @@
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import sbitneva.homeworks.entities.Monk;
 import sbitneva.homeworks.entities.Tournament;
 import sbitneva.homeworks.factories.MonkFactory;
+import sbitneva.homeworks.queue.MonkQueue;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class TournamentTest {
-    public Queue<Monk> monks = new LinkedList<>();
-    public static Queue<Monk> winners = new LinkedList<>();
+    private static Logger log = Logger.getLogger(TournamentTest.class.getName());
 
     @Test
-    public void testTournament(){
-        for(int i = 0; i < 31; i++){
+    public void testLogic() {
+
+        MonkQueue   monks    = new MonkQueue();
+        MonkQueue   winners  = new MonkQueue();
+        Monk        bestMonk = new Monk();
+
+        for (int i = 0; i < 31; i++) {
             monks.add(MonkFactory.create());
         }
-        Monk monkBest = new Monk();
-        monkBest.setEnergy(2000);
-        monkBest.setVillage("Kiev");
-        monks.add(monkBest);
-        while(winners.size() != 1){
-            winners = Tournament.startTour(monks);
-            monks = winners;
-            System.out.println(winners.size());
-            System.out.println(monks.size());
+
+
+        bestMonk.setName("Vasya");
+        bestMonk.setVillage("Kiev");
+        bestMonk.setEnergy(2000);
+
+        monks.add(bestMonk);
+
+        Tournament tournament = new Tournament(monks);
+        while (winners.size() != 1) {
+            try {
+                sleep(500);
+            } catch (InterruptedException e) {
+                log.error(e.getMessage());
+            }
+            if (!tournament.isAlive()) {
+                winners = tournament.getWinners();
+                monks = winners;
+                tournament = new Tournament(monks);
+            }
         }
 
-        assertTrue((monks.peek()).equals(monkBest));
+        assertEquals(winners.size(), 1);
+        assertEquals(winners.peek(), bestMonk);
     }
 }

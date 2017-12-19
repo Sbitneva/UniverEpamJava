@@ -1,13 +1,15 @@
 package sbitneva.homeworks.entities;
 
 public class Monk {
-    private static int id;
-    private String name;
-    private String village;
-    private int energy;
+    private static int  id;
+    private String      name;
+    private String      village;
+    private int         energy;
 
-    public Monk(){
+    public Monk() {
         id++;
+        this.name = "Name # " + id;
+        this.village = "";
     }
 
     public int getId() {
