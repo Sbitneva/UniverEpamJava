@@ -26,7 +26,7 @@ public class TestParsers {
         staxXmlParser = new StaxXmlParser();
         aircraftsFromDom = domXmlParser.read(path);
         aircraftsFromSax = saxXmlParser.getObjects(path);
-        aircraftsFromStax = staxXmlParser.getAircrafts(path);
+        aircraftsFromStax = staxXmlParser.getAircraftList(path);
     }
 
     @Test
