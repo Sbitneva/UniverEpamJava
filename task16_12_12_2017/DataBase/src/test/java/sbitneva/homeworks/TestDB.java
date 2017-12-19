@@ -1,5 +1,6 @@
 package sbitneva.homeworks;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import sbitneva.homeworks.entities.Football;
 import sbitneva.homeworks.factories.FootballFactory;
@@ -9,10 +10,11 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class TestDB {
-    Football football = null;
+    private static Logger log = Logger.getLogger(Main.class.getName());
 
     @Test
     public void testDB() {
+        Football football;
         try {
             football = FootballFactory.create("FOOTBALL", "localhost", 3306);
             assertTrue(football != null);
@@ -39,7 +41,7 @@ public class TestDB {
 
             football.stop();
         } catch (Exception e) {
-
+            log.error(e.getMessage());
         }
 
     }
