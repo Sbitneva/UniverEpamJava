@@ -12,7 +12,7 @@ public class Thief extends Thread {
         this.inputQueue = inputQueue;
         this.loader = loader;
         try {
-            sleep(2000);
+            sleep(1000);
         } catch (InterruptedException e) {
             log.error(e.getMessage());
         }
