@@ -1,9 +1,9 @@
-package app;
+package sbitneva.homeworks;
 
-import app.entities.StatisticsPage;
-import app.entities.URLPage;
-import app.entities.URLReader;
-import app.tasks.Task;
+import sbitneva.homeworks.entities.StatisticsPage;
+import sbitneva.homeworks.entities.URLPage;
+import sbitneva.homeworks.entities.URLReader;
+import sbitneva.homeworks.tasks.Task;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static org.junit.Assert.assertTrue;
@@ -26,8 +26,8 @@ public class TestTask {
 
     @Test
     public void testTask() throws Exception{
-        final URL htmlUrl = new File("src/test/java/sbitneva/homeworks/app/source.html").toURI().toURL();
-        final URL smallTextUrl = new File("src/test/java/sbitneva/homeworks/app/smallText").toURI().toURL();
+        final URL htmlUrl = new File("src/test/java/sbitneva/homeworks/source.html").toURI().toURL();
+        final URL smallTextUrl = new File("src/test/java/sbitneva/homeworks/smallText").toURI().toURL();
 
         StatisticsPage statisticsPage = new StatisticsPage(smallTextUrl);
         mock(StatisticsPage.class);

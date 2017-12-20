@@ -1,9 +1,9 @@
-package app;
+package sbitneva.homeworks;
 
-import app.entities.StatisticsPage;
-import app.entities.URLPage;
-import app.entities.URLReader;
-import app.tasks.Task;
+import sbitneva.homeworks.entities.StatisticsPage;
+import sbitneva.homeworks.entities.URLPage;
+import sbitneva.homeworks.entities.URLReader;
+import sbitneva.homeworks.tasks.Task;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -33,9 +33,9 @@ public class TestUrlPage {
     @Test
     public void testURLPage() throws Exception{
 
-        html = URLReader.readUrl(new File("src/test/java/sbitneva/homeworks/app/text.html").toURI().toURL());
+        html = URLReader.readUrl(new File("src/test/java/sbitneva/homeworks/text.html").toURI().toURL());
 
-        text =  URLReader.readUrl(new File("src/test/java/sbitneva/homeworks/app/smallText").toURI().toURL());
+        text =  URLReader.readUrl(new File("src/test/java/sbitneva/homeworks/smallText").toURI().toURL());
 
         randUrl = new URL("https://stackoverflow.com");
 

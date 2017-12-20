@@ -1,4 +1,4 @@
-package app.entities;
+package sbitneva.homeworks.entities;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package app.entities;
+package sbitneva.homeworks.entities;
 
 import java.net.URL;
 import java.util.*;
