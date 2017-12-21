@@ -16,7 +16,7 @@ public class TestProducerConsumer {
         BigQ inputQueue = new BigQ();
 
         for(int i = 0; i < STOCK_SIZE; i++){
-            inputQueue.put(1);
+            inputQueue.put(i);
         }
 
         assertEquals(inputQueue.size(), STOCK_SIZE);
@@ -41,6 +41,6 @@ public class TestProducerConsumer {
             }
         }
 
-        assertEquals(accountant.getResult(), 10);
+        assertEquals(45, accountant.getResult());
     }
 }

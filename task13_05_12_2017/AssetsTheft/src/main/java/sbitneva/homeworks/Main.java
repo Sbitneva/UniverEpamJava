@@ -32,7 +32,7 @@ public class Main {
 
         try {
             thief.join();
-            loader.join();
+            //loader.join();
             accountant.join();
         } catch (InterruptedException e) {
             log.error(e.getMessage());

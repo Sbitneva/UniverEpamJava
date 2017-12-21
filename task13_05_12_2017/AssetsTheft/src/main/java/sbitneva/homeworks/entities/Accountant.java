@@ -12,7 +12,7 @@ public class Accountant extends Thread {
         this.endCounter = endCounter;
         this.loader = loader;
         try {
-            sleep(1000);
+            sleep(500);
         } catch (InterruptedException e) {
             log.error(e.getMessage());
         }
@@ -25,6 +25,7 @@ public class Accountant extends Thread {
             if (loader.valueSet()) {
                 result += loader.get();
                 endCounter--;
+                log.debug("Accountant counter = " + endCounter);
             }
         }
         log.debug("Total value of assets is " + result);

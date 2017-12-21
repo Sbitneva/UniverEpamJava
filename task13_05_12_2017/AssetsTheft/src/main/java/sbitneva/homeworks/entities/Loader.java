@@ -30,12 +30,14 @@ public class Loader extends Thread {
     }
 
     public int get() {
-        this.counter--;
+        int n = loaderQ.get();
+        log.debug("Accountant gets asset with " + n + " value from Loader");
         log.debug("Loader Counter = " + counter);
-        return loaderQ.get();
+        return n;
     }
 
     public void put(int value) {
+        this.counter--;
         loaderQ.put(value);
     }
 }
