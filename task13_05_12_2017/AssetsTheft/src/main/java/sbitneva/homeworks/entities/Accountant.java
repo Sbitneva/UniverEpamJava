@@ -1,7 +1,6 @@
 package sbitneva.homeworks.entities;
 
 import org.apache.log4j.Logger;
-import sbitneva.homeworks.Main;
 
 public class Accountant extends Thread {
     private static Logger log = Logger.getLogger(Accountant.class.getName());
@@ -13,7 +12,7 @@ public class Accountant extends Thread {
         this.endCounter = endCounter;
         this.loader = loader;
         try {
-            sleep(2000);
+            sleep(500);
         } catch (InterruptedException e) {
             log.error(e.getMessage());
         }
@@ -22,21 +21,15 @@ public class Accountant extends Thread {
 
     @Override
     public void run() {
-        int n = 0;
-        while (endCounter >= 0) {
+        while (endCounter > 0) {
             if (loader.valueSet()) {
                 result += loader.get();
-                n++;
-                System.out.println("Accountant got " + n + " asset");
-                --endCounter;
+                endCounter--;
+                log.debug("Accountant counter = " + endCounter);
             }
         }
-        Main.end_calc = true;
-        Main.result = result;
-
         log.debug("Total value of assets is " + result);
         log.debug("END of Accountant " + result);
-        log.debug("Main.end_calc = " + Main.end_calc);
     }
 
     synchronized public int getResult(){

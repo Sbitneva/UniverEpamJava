@@ -11,11 +11,6 @@ public class Thief extends Thread {
     public Thief(BigQ inputQueue, Loader loader) {
         this.inputQueue = inputQueue;
         this.loader = loader;
-        try {
-            sleep(2000);
-        } catch (InterruptedException e) {
-            log.error(e.getMessage());
-        }
         log.debug("Total amount of assets is " + inputQueue.size());
         start();
     }

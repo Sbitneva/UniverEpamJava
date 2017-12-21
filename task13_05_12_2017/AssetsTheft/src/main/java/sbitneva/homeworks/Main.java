@@ -22,15 +22,14 @@ import sbitneva.homeworks.queue.BigQ;
 
 public class Main {
     private static Logger log = Logger.getLogger(Main.class.getName());
-    public static boolean end_calc = false;
-    public static int result = 0;
 
     public static void main(String... args) {
         BigQ inputQueue = RandomBigQFactory.create();
-        Loader loader = new Loader(); // Pertov
 
+        Loader loader = new Loader(inputQueue.size()); // Pertov
         Thief thief = new Thief(inputQueue, loader); // Ivanov
         Accountant accountant = new Accountant(loader, inputQueue.size()); // Necheporchyk
+
         try {
             thief.join();
             loader.join();
@@ -39,7 +38,7 @@ public class Main {
             log.error(e.getMessage());
         }
 
-        while (!end_calc) {
+        while (inputQueue.size() > 0) {
             try {
                 Thread.sleep(500);
             }catch(InterruptedException e){
@@ -47,6 +46,7 @@ public class Main {
             }
         }
 
-        log.debug("RESULT = " + result);
+        log.debug("RESULT = " + accountant.getResult());
     }
 }
+

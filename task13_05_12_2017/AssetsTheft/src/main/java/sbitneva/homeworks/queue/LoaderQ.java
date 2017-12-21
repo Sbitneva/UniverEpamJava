@@ -1,6 +1,9 @@
 package sbitneva.homeworks.queue;
 
+import org.apache.log4j.Logger;
+
 public class LoaderQ {
+    private static Logger log = Logger.getLogger(LoaderQ.class.getName());
     private int     n;
     private boolean valueSet = false;
 
@@ -9,10 +12,9 @@ public class LoaderQ {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Get exception - " + e.getMessage());
+                log.error(e.getMessage());
             }
         }
-        System.out.println("gets " + n);
         valueSet = false;
         notify();
         return n;
@@ -23,10 +25,9 @@ public class LoaderQ {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Put exception - " + e.getMessage());
+                log.error(e.getMessage());
             }
         }
-        System.out.println("puts " + n);
         this.n = n;
         valueSet = true;
         notify();
