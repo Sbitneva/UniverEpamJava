@@ -1,4 +1,4 @@
-# EPAM Java (2017 autumn-winter)
+# External Java course (2017 autumn-winter)
 
 ## Tasks
 
